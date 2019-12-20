@@ -1,5 +1,7 @@
 # UUID                                                        	Group Name
 #
 100a400c37795b31dc0ef00c6500650c45e73a34                      	zuul-maintainers
+global:Anonymous-Users                                        	Anonymous Users
 global:Project-Owners                                         	Project Owners
+global:Registered-Users                                       	Registered Users
 google:AI2Pq9rwJtXWrKQ9Q62CcHSid7ngIF2hCfJ4bSpVquX_P2z5kFM6v9s	google/gerritcodereview-maintainers@googlegroups.com
