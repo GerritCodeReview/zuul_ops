@@ -1,0 +1,52 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nodepool
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    repoURL: https://opendev.org/zuul/zuul-helm
+    path: charts/nodepool
+    helm:
+      values: |
+        clouds: ''
+        builder:
+          enabled: false
+        config:
+          diskimages: []
+          zookeeper-servers:
+            - host: zookeeper.zookeeper
+              port: 2181
+          providers:
+            - name: gcloud-provider
+              driver: gce
+              project: gerritcodereview-ci
+              region: us-central1
+              zone: us-central1-a
+              cloud-images:
+                - name: debian-stretch
+                  image-project: debian-cloud
+                  image-family: debian-9
+                  username: zuul
+                  key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDaTT3+Y6dIh221ZsQ0ki6VwGb6lzd1/CvIS8RX6ZNmxJTXS7UKlvhAVTbGQPtmjdIQbwUyEqZEvIm/bUBr7dNbyeMLiRiRtoN+u1Quq8OAes2N7nUKnjLjGjVnM2mvYHGWHRDbpAQCtmXtbiQkHkfLLzewb+MqntQZ57xap31qriTkv4rdnlMN4kElILb5E/8WOAAJXYrt3b1TrTXwZUx7is1OTa38I9jJTpUMCn2otWGH9LlfeUhz/z8ZPB21wgUZN9CF5NwwBanqCNXy0jHiumOGx9e7Hc7apt641KiDuRt0aWyE6No/aMe6hVYnFR3NMG3rBtortXl+R5birK8l zuul
+              pools:
+                - name: main
+                  max-servers: 8
+                  #host-key-checking: False
+                  use-internal-ip: True
+                  labels:
+                    - name: testlabel
+                      instance-type: f1-micro
+                      cloud-image: debian-stretch
+                      volume-type: standard
+                      volume-size: 10
+          labels:
+            - name: testlabel
+              min-ready: 1
+  destination:
+    namespace: zuul
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated: {}
