@@ -45,6 +45,29 @@
       "revId": "5aa24946fc16d972a2b498d78ac86b8187e449ce",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "370783cc_46692e60",
+        "filename": "letsencrypt.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-01-12T09:26:25Z",
+      "side": 1,
+      "message": "Do we want to use a common e-mail address? Or a private group/mailing list?",
+      "range": {
+        "startLine": 11,
+        "startChar": 11,
+        "endLine": 11,
+        "endChar": 30
+      },
+      "revId": "5aa24946fc16d972a2b498d78ac86b8187e449ce",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
