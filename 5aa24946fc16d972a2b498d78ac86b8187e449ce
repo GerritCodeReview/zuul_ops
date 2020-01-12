@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b855233e_7a5f5890",
+        "filename": "README",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-01-12T09:24:58Z",
+      "side": 1,
+      "message": "Why not using Helm Charts instead of manual kubectl statements?",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 7
+      },
+      "revId": "5aa24946fc16d972a2b498d78ac86b8187e449ce",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2be519f4_5b2f3bc4",
+        "filename": "README",
+        "patchSetId": 3
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-01-12T09:24:58Z",
+      "side": 1,
+      "message": "nit: space at EOL",
+      "range": {
+        "startLine": 42,
+        "startChar": 49,
+        "endLine": 42,
+        "endChar": 50
+      },
+      "revId": "5aa24946fc16d972a2b498d78ac86b8187e449ce",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
