@@ -68,6 +68,52 @@
       "revId": "5aa24946fc16d972a2b498d78ac86b8187e449ce",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "df8a6800_01677f14",
+        "filename": "nodepool/nodepool.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-01-12T09:31:57Z",
+      "side": 1,
+      "message": "e2-highcpu-8 would be much better: Gerrit build is very CPU-hungry and leverages Bazel parallelism quite a lot",
+      "range": {
+        "startLine": 24,
+        "startChar": 27,
+        "endLine": 24,
+        "endChar": 35
+      },
+      "revId": "5aa24946fc16d972a2b498d78ac86b8187e449ce",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a17df929_119857e1",
+        "filename": "nodepool/nodepool.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-01-12T09:31:57Z",
+      "side": 1,
+      "message": "Can we use a different image? We already have another one that contains all the necessary pre-requisites for running the build.",
+      "range": {
+        "startLine": 25,
+        "startChar": 25,
+        "endLine": 25,
+        "endChar": 39
+      },
+      "revId": "5aa24946fc16d972a2b498d78ac86b8187e449ce",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
