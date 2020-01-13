@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "cb589e49_8bb8018b",
+        "filename": "README",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1087826
+      },
+      "writtenOn": "2020-01-13T15:43:58Z",
+      "side": 1,
+      "message": "Some of this could be replaced by helm charts, though this particular command is tricky since it involves running gcloud.\n\nI\u0027m also still figuring out the best way to use helm/argo/etc for this.  So while I do that, I thought at the very least I should document the manual steps I\u0027ve done, and we can refactor later.",
+      "parentUuid": "b855233e_7a5f5890",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 7
+      },
+      "revId": "5aa24946fc16d972a2b498d78ac86b8187e449ce",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "2be519f4_5b2f3bc4",
         "filename": "README",
         "patchSetId": 3
@@ -48,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "7c87ddac_74ff6bf9",
+        "filename": "README",
+        "patchSetId": 3
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1087826
+      },
+      "writtenOn": "2020-01-13T15:43:58Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "2be519f4_5b2f3bc4",
+      "range": {
+        "startLine": 42,
+        "startChar": 49,
+        "endLine": 42,
+        "endChar": 50
+      },
+      "revId": "5aa24946fc16d972a2b498d78ac86b8187e449ce",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "370783cc_46692e60",
         "filename": "letsencrypt.yaml",
         "patchSetId": 3
@@ -59,6 +107,30 @@
       "writtenOn": "2020-01-12T09:26:25Z",
       "side": 1,
       "message": "Do we want to use a common e-mail address? Or a private group/mailing list?",
+      "range": {
+        "startLine": 11,
+        "startChar": 11,
+        "endLine": 11,
+        "endChar": 30
+      },
+      "revId": "5aa24946fc16d972a2b498d78ac86b8187e449ce",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0966582d_7d36af56",
+        "filename": "letsencrypt.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1087826
+      },
+      "writtenOn": "2020-01-13T15:43:58Z",
+      "side": 1,
+      "message": "I\u0027ll see if it\u0027s actually required.  If it isn\u0027t, I think we should just omit it.  If it is, we should probably make a group for it.  I\u0027ll let you know.",
+      "parentUuid": "370783cc_46692e60",
       "range": {
         "startLine": 11,
         "startChar": 11,
@@ -94,6 +166,30 @@
     },
     {
       "key": {
+        "uuid": "c542b344_4022e6bc",
+        "filename": "nodepool/nodepool.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1087826
+      },
+      "writtenOn": "2020-01-13T15:43:58Z",
+      "side": 1,
+      "message": "Yes, I just didn\u0027t want to waste resources while testing.  Also, we can have as many labels as we want and request appropriate machines (and later pods) for the job at hand.  For instance, use this to run a linter, and the other to run a build.",
+      "parentUuid": "df8a6800_01677f14",
+      "range": {
+        "startLine": 24,
+        "startChar": 27,
+        "endLine": 24,
+        "endChar": 35
+      },
+      "revId": "5aa24946fc16d972a2b498d78ac86b8187e449ce",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "a17df929_119857e1",
         "filename": "nodepool/nodepool.yaml",
         "patchSetId": 3
@@ -105,6 +201,30 @@
       "writtenOn": "2020-01-12T09:31:57Z",
       "side": 1,
       "message": "Can we use a different image? We already have another one that contains all the necessary pre-requisites for running the build.",
+      "range": {
+        "startLine": 25,
+        "startChar": 25,
+        "endLine": 25,
+        "endChar": 39
+      },
+      "revId": "5aa24946fc16d972a2b498d78ac86b8187e449ce",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "daeb4d0a_73cc83f8",
+        "filename": "nodepool/nodepool.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1087826
+      },
+      "writtenOn": "2020-01-13T15:43:58Z",
+      "side": 1,
+      "message": "Yes, where is the image?\n\n(Also, later we can work on automatically rebuilding images to keep them up to date.)",
+      "parentUuid": "a17df929_119857e1",
       "range": {
         "startLine": 25,
         "startChar": 25,
