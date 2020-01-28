@@ -1,11 +1,13 @@
 {
   "checks": {
     "zuul-check:zuul_ops": {
-      "state": "SCHEDULED",
-      "message": "Change has been enqueued in check",
+      "state": "NOT_RELEVANT",
+      "message": "Project has no jobs configured",
+      "url": "http://localhost:3000/buildset/1dbc342d572a4f6f8571856f25c25e15",
       "started": "2020-01-28T21:41:54Z",
+      "finished": "2020-01-28T21:41:56Z",
       "created": "2020-01-28T21:40:55Z",
-      "updated": "2020-01-28T21:41:55Z"
+      "updated": "2020-01-28T21:41:56Z"
     }
   }
 }
