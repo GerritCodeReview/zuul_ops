@@ -1,11 +1,13 @@
 {
   "checks": {
     "zuul-check:zuul_ops": {
-      "state": "RUNNING",
-      "message": "Jobs have started running",
+      "state": "SUCCESSFUL",
+      "message": "Change passed all voting jobs",
+      "url": "http://localhost:3000/buildset/bef84d80638449bca92fcddee17bf876",
       "started": "2020-01-28T21:43:54Z",
+      "finished": "2020-01-28T21:43:56Z",
       "created": "2020-01-28T21:43:55Z",
-      "updated": "2020-01-28T21:43:56Z"
+      "updated": "2020-01-28T21:43:57Z"
     }
   }
 }
