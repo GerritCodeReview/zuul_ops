@@ -1,0 +1,39 @@
+---
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: gcloud-authdaemon
+  namespace: zuul
+  labels:    
+    app.kubernetes.io/name: gcloud-authdaemon
+spec:
+  selector:
+    matchLabels:
+      name: gcloud-authdaemon
+  template:
+    metadata:
+      labels:
+        name: gcloud-authdaemon
+    spec:
+      tolerations:
+      - key: node-role.kubernetes.io/master
+        effect: NoSchedule
+      containers:
+      - name: gcloud-authdaemon
+        image: docker.io/jeblair/authdaemon:latest
+        resources:
+          limits:
+            memory: 200Mi
+          requests:
+            cpu: 100m
+            memory: 200Mi
+        volumeMounts:
+        - name: authdaemon
+          mountPath: /authdaemon
+      terminationGracePeriodSeconds: 2
+      volumes:
+      - name: authdaemon
+        hostPath:
+          path: /var/authdaemon/executor
+          type: DirectoryOrCreate
+      serviceAccountName: logs

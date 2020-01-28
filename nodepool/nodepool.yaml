@@ -17,7 +17,6 @@ providers:
     pools:
       - name: main
         max-servers: 8
-        #host-key-checking: False
         use-internal-ip: True
         labels:
           - name: testlabel

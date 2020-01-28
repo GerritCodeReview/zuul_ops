@@ -1,0 +1,133 @@
+- name: Deploy Zuul
+  hosts: localhost
+  tasks:
+    - name: Make kube directory
+      file:
+        path: "{{ ansible_user_dir }}/.kube"
+        state: directory
+    - name: Write kube config
+      template:
+        src: kubecfg.yaml.j2
+        dest: "{{ ansible_user_dir }}/.kube/config"
+
+    - name: Update Letsencrypt configuration
+      k8s:
+        state: present
+        src: ../k8s/letsencrypt.yaml
+
+    - name: Update authdaemon configuration
+      k8s:
+        state: present
+        src: ../k8s/authdaemon.yaml
+
+    - name: Update Nodepool config
+      k8s:
+        state: present
+        definition:
+          apiVersion: v1
+          kind: Secret
+          metadata:
+            namespace: zuul
+            name: nodepool-gcs
+            labels:
+              app.kubernetes.io/name: nodepool
+              app.kubernetes.io/instance: nodepool
+              app.kubernetes.io/part-of: nodepool
+          stringData:
+            clouds.yaml: ""
+            nodepool.yaml: "{{ lookup('file', '../nodepool/nodepool.yaml') }}"
+
+    - name: Update Zuul/Nodepool private key
+      k8s:
+        state: present
+        definition:
+          apiVersion: v1
+          kind: Secret
+          metadata:
+            namespace: zuul
+            name: nodepool-private-key
+            labels:
+              app.kubernetes.io/name: zuul
+              app.kubernetes.io/instance: zuul
+              app.kubernetes.io/part-of: zuul
+          stringData:
+            nodepool_id_rsa: "{{ zuul_deploy.nodepool_private_key }}"
+      register: zuul_config
+      # Set no_log because we are templating in the private key
+      no_log: true
+
+    - name: Update Zuul service config
+      k8s:
+        state: present
+        definition:
+          apiVersion: v1
+          kind: Secret
+          metadata:
+            namespace: zuul
+            name: zuul-config
+            labels:
+              app.kubernetes.io/name: zuul
+              app.kubernetes.io/instance: zuul
+              app.kubernetes.io/part-of: zuul
+          stringData:
+            main.yaml: "{{ lookup('template', '../zuul/zuul.conf') }}"
+      register: zuul_config
+      # Set no_log because we are templating passwords into the config
+      no_log: true
+
+    - name: Update Zuul tenant config
+      k8s:
+        state: present
+        definition:
+          apiVersion: v1
+          kind: Secret
+          metadata:
+            namespace: zuul
+            name: zuul-tenant-config
+            labels:
+              app.kubernetes.io/name: zuul
+              app.kubernetes.io/instance: zuul
+              app.kubernetes.io/part-of: zuul
+          stringData:
+            main.yaml: "{{ lookup('file', '../zuul/main.yaml') }}"
+      register: tenant_config
+
+    - name: Update Nodepool deployment
+      k8s:
+        state: present
+        src: ../k8s/nodepool.yaml
+
+    - name: Update Zuul deployment
+      k8s:
+        state: present
+        src: ../k8s/zuul.yaml
+
+    - name: Reconfigure Zuul
+      when: tenant_config.changed or zuul_config.changed
+      block:
+        - name: Add scheduler to inventory
+          add_host:
+            name: 'zuul-scheduler-0'
+            ansible_kubectl_namespace: zuul
+            ansible_connection: kubectl
+        - name: Wait until remote Zuul config is updated
+          delegate_to: 'zuul-scheduler-0'
+          stat:
+            path: /etc/zuul/zuul.conf
+            follow: true
+          register: remote_zuul_st
+          until: "remote_zuul_st.stat.checksum == (zuul_config.result.data['zuul.conf'] | b64decode | hash('sha1'))"
+          delay: 10
+          retries: 30
+        - name: Wait until remote tenant config is updated
+          delegate_to: 'zuul-scheduler-0'
+          stat:
+            path: /etc/zuul/tenant/main.yaml
+            follow: true
+          register: remote_tenant_st
+          until: "remote_tenant_st.stat.checksum == (tenant_config.result.data['main.yaml'] | b64decode | hash('sha1'))"
+          delay: 10
+          retries: 30
+        - name: Send reconfiguration notice to scheduler
+          delegate_to: 'zuul-scheduler-0'
+          command: zuul-scheduler full-reconfigure
