@@ -41,17 +41,58 @@ kubectl label namespace cert-manager certmanager.k8s.io/disable-validation=true
 kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v0.12.0/cert-manager.yaml
 kubectl apply -n cert-manager -f letsencrypt.yaml 
 
+# Install mariadb
+
+kubectl create namespace mariadb
+
+Use Google cloud click to deploy
+TODO: find a better HA sql database operator
+
+kubectl port-forward svc/mariadb-mariadb --namespace mariadb 3306
+mysql -h 127.0.0.1 -P 3306 -u root -p
+create database zuul;
+GRANT ALL PRIVILEGES ON zuul.* TO 'zuul'@'%' identified by '<password>' WITH GRANT OPTION;
+
 # Install Zuul
 
 gcloud compute addresses create zuul-static-ip --global
-
 kubectl create namespace zuul
 
-kubectl create -n zuul secret generic nodepool-config --from-file=./nodepool/nodepool.yaml --from-file=./nodepool/clouds.yaml
+# Bind k8s service accounts to gcp service accounts
+kubectl create serviceaccount --namespace zuul logs
+kubectl create serviceaccount --namespace zuul nodepool
+kubectl create serviceaccount --namespace zuul zuul
 
-kubectl create -n zuul secret generic zuul-tenant-config --from-file=./zuul/main.yaml
+gcloud iam service-accounts add-iam-policy-binding \
+  --role roles/iam.workloadIdentityUser \
+  --member "serviceAccount:gerritcodereview-ci.svc.id.goog[zuul/logs]" \
+  zuul-logs@gerritcodereview-ci.iam.gserviceaccount.com
 
-kubectl apply -n argocd -f nodepool-app.yaml
-kubectl apply -n argocd -f zuul-app.yaml
+gcloud iam service-accounts add-iam-policy-binding \
+  --role roles/iam.workloadIdentityUser \
+  --member "serviceAccount:gerritcodereview-ci.svc.id.goog[zuul/nodepool]" \
+  nodepool@gerritcodereview-ci.iam.gserviceaccount.com
 
-kubectl apply -n zuul -f ingress.yaml
+gcloud iam service-accounts add-iam-policy-binding \
+  --role roles/iam.workloadIdentityUser \
+  --member "serviceAccount:gerritcodereview-ci.svc.id.goog[zuul/zuul]" \
+  zuul-63@gerritcodereview-ci.iam.gserviceaccount.com
+
+kubectl annotate serviceaccount \
+  --namespace zuul logs \
+  iam.gke.io/gcp-service-account=zuul-logs@gerritcodereview-ci.iam.gserviceaccount.com
+
+kubectl annotate serviceaccount \
+  --namespace zuul nodepool \
+  iam.gke.io/gcp-service-account=nodepool@gerritcodereview-ci.iam.gserviceaccount.com
+
+kubectl annotate serviceaccount \
+  --namespace zuul zuul \
+  iam.gke.io/gcp-service-account=zuul-63@gerritcodereview-ci.iam.gserviceaccount.com
+
+# create a service account for self-deployment
+
+kubectl -n zuul create serviceaccount zuul-deployment
+kubectl create clusterrolebinding zuul-deployment-cluster-admin-binding \
+  --clusterrole cluster-admin \
+  --user system:serviceaccount:zuul:zuul-deployment

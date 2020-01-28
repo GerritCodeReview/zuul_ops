@@ -1,0 +1,20 @@
+# -*- mode: yaml -*-
+
+apiVersion: 'v1'
+kind: 'Config'
+preferences: {}
+users:
+  - name: "zuul-deploy"
+    user:
+      token: "{{ zuul_deploy.token }}"
+clusters:
+  - name: 'control-plane'
+    cluster:
+      server: "{{ zuul_deploy.server }}"
+      certificate-authority-data: "{{ zuul_deploy.cert }}"
+contexts:
+  - name: "zuul-deploy/control-plane"
+    context:
+      user: "zuul-deploy"
+      cluster: "control-plane"
+current-context: "zuul-deploy/control-plane"

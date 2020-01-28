@@ -1,0 +1,41 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: zuul
+  name: nodepool-launcher-gcs
+  labels:    
+    app.kubernetes.io/name: nodepool
+    app.kubernetes.io/instance: nodepool
+    app.kubernetes.io/part-of: nodepool
+    app.kubernetes.io/component: nodepool-launcher
+spec:
+  replicas: 1
+  selector:
+    matchLabels:      
+      app.kubernetes.io/name: nodepool
+      app.kubernetes.io/instance: nodepool
+      app.kubernetes.io/part-of: nodepool
+      app.kubernetes.io/component: nodepool-launcher
+  template:
+    metadata:
+      labels:        
+        app.kubernetes.io/name: nodepool
+        app.kubernetes.io/instance: nodepool
+        app.kubernetes.io/part-of: nodepool
+        app.kubernetes.io/component: nodepool-launcher
+    spec:
+      containers:
+      - name: launcher
+        image: zuul/nodepool-launcher:latest
+        env:
+        - name: OS_CLIENT_CONFIG_FILE
+          value: /etc/nodepool/clouds.yaml
+        volumeMounts:
+        - name: nodepool-config
+          mountPath: /etc/nodepool
+      volumes:
+      - name: nodepool-config
+        secret:
+          secretName: nodepool-gcs
+      serviceAccountName: nodepool
