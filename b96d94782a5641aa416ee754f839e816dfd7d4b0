@@ -1,13 +1,9 @@
 {
   "checks": {
     "zuul-check:zuul_ops": {
-      "state": "NOT_RELEVANT",
-      "message": "Project has no jobs configured",
-      "url": "http://localhost:3000/buildset/1dbc342d572a4f6f8571856f25c25e15",
-      "started": "2020-01-28T21:41:54Z",
-      "finished": "2020-01-28T21:41:56Z",
+      "state": "NOT_STARTED",
       "created": "2020-01-28T21:40:55Z",
-      "updated": "2020-01-28T21:41:56Z"
+      "updated": "2020-01-28T22:33:29Z"
     }
   }
 }
