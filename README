@@ -47,11 +47,14 @@ gcloud compute addresses create zuul-static-ip --global
 
 kubectl create namespace zuul
 
-kubectl create -n zuul secret generic nodepool-config --from-file=./nodepool/nodepool.yaml --from-file=./nodepool/clouds.yaml
+#kubectl create -n zuul secret generic nodepool-config --from-file=./nodepool/nodepool.yaml --from-file=./nodepool/clouds.yaml
+#kubectl create -n zuul secret generic zuul-tenant-config --from-file=./zuul/main.yaml
+#kubectl apply -n argocd -f nodepool-app.yaml
+#kubectl apply -n argocd -f zuul-app.yaml
 
-kubectl create -n zuul secret generic zuul-tenant-config --from-file=./zuul/main.yaml
-
-kubectl apply -n argocd -f nodepool-app.yaml
-kubectl apply -n argocd -f zuul-app.yaml
+kubectl apply -n zuul -f k8s/nodepool.yaml
+kubectl apply -n zuul -f k8s/zuul.yaml
+kubectl apply -n zuul -f k8s/authdaemon.yaml
 
 kubectl apply -n zuul -f ingress.yaml
+
