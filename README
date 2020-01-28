@@ -9,6 +9,8 @@ kubectl create clusterrolebinding cluster-admin-binding \
   --clusterrole=cluster-admin \
   --user=$(gcloud config get-value core/account)
 
+TODO: service accounts
+
 # Install argo
 
 kubectl create namespace argocd
@@ -41,6 +43,18 @@ kubectl label namespace cert-manager certmanager.k8s.io/disable-validation=true
 kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v0.12.0/cert-manager.yaml
 kubectl apply -n cert-manager -f letsencrypt.yaml 
 
+# Install mariadb
+
+kubectl create namespace mariadb
+
+Use Google cloud click to deploy
+TODO: find a better HA sql database operator
+
+kubectl port-forward svc/mariadb-mariadb --namespace mariadb 3306
+mysql -h 127.0.0.1 -P 3306 -u root -p
+create database zuul;
+GRANT ALL PRIVILEGES ON zuul.* TO 'zuul'@'%' identified by '<password>' WITH GRANT OPTION;
+
 # Install Zuul
 
 gcloud compute addresses create zuul-static-ip --global
@@ -50,6 +64,7 @@ kubectl create namespace zuul
 kubectl create -n zuul secret generic nodepool-config --from-file=./nodepool/nodepool.yaml --from-file=./nodepool/clouds.yaml
 
 kubectl create -n zuul secret generic zuul-tenant-config --from-file=./zuul/main.yaml
+kubectl create -n zuul secret generic nodepool-private-key --from-file=./nodepool_id_rsa
 
 kubectl apply -n argocd -f nodepool-app.yaml
 kubectl apply -n argocd -f zuul-app.yaml
