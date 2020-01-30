@@ -1,13 +1,9 @@
 {
   "checks": {
     "zuul-check:zuul_ops": {
-      "state": "FAILED",
-      "message": "Change failed",
-      "url": "https://gerrit-zuul.inaugust.com/t/gerrit/buildset/5b65f456923640edb0e3dc15c2773085",
-      "started": "2020-01-30T23:17:39Z",
-      "finished": "2020-01-30T23:19:37Z",
+      "state": "NOT_STARTED",
       "created": "2020-01-30T22:44:39Z",
-      "updated": "2020-01-30T23:19:38Z"
+      "updated": "2020-01-30T23:23:41Z"
     }
   }
 }
