@@ -1,4 +1,8 @@
+- job:
+    name: test-job
+    run: test.yaml
+
 - project:
     check:
       jobs:
-        - noop
+        - test-job
