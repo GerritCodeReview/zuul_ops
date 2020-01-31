@@ -1,9 +1,11 @@
 {
   "checks": {
     "zuul-check:zuul_ops": {
-      "state": "NOT_STARTED",
+      "state": "SCHEDULED",
+      "message": "Change has been enqueued in check",
+      "started": "2020-01-31T01:40:08Z",
       "created": "2020-01-30T22:44:39Z",
-      "updated": "2020-01-31T01:39:34Z"
+      "updated": "2020-01-31T01:40:08Z"
     }
   }
 }
