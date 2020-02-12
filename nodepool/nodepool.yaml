@@ -24,6 +24,11 @@ providers:
             cloud-image: debian-stretch
             volume-type: standard
             volume-size: 10
+          - name: debian-stretch-8G
+            instance-type: n1-standard-2
+            cloud-image: debian-stretch
+            volume-type: standard
+            volume-size: 40
 labels:
   - name: testlabel
     min-ready: 1
