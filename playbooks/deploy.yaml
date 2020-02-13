@@ -74,7 +74,7 @@
               app.kubernetes.io/instance: zuul
               app.kubernetes.io/part-of: zuul
           stringData:
-            main.yaml: "{{ lookup('template', root + '/zuul/zuul.conf') }}"
+            zuul.conf: "{{ lookup('template', root + '/zuul/zuul.conf') }}"
       register: zuul_config
       # Set no_log because we are templating passwords into the config
       no_log: true
