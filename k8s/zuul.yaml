@@ -277,6 +277,14 @@ spec:
         requests:
           storage: 80Gi
 ---
+apiVersion: networking.gke.io/v1beta1
+kind: ManagedCertificate
+metadata:
+  name: ci-gerritcodereview-com
+spec:
+  domains:
+    - ci.gerritcodereview.com
+---
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
@@ -284,18 +292,13 @@ metadata:
   namespace: zuul
   annotations:
     kubernetes.io/ingress.global-static-ip-name: "zuul-static-ip"
-    cert-manager.io/cluster-issuer: letsencrypt-prod
-    acme.cert-manager.io/http01-edit-in-place: "true"
+    networking.gke.io/managed-certificates: "ci-gerritcodereview-com"
 spec:
   rules:
-  - host: gerrit-zuul.inaugust.com
+  - host: ci.gerritcodereview.com
     http:
       paths:
       - backend:
           serviceName: zuul-web
           servicePort: 9000
         path: /*
-  tls:
-    - secretName: zuul-web-certs
-      hosts:
-        - gerrit-zuul.inaugust.com
