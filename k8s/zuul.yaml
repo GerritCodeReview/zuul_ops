@@ -56,6 +56,8 @@ metadata:
     app.kubernetes.io/instance: zuul
     app.kubernetes.io/part-of: zuul
     app.kubernetes.io/component: zuul-web
+  annotations:
+    beta.cloud.google.com/backend-config: '{"ports": {"9000":"zuul-web-backendconfig"}}'
 spec:
   type: NodePort
   ports:
@@ -285,6 +287,13 @@ metadata:
 spec:
   domains:
     - ci.gerritcodereview.com
+---
+apiVersion: cloud.google.com/v1beta1
+kind: BackendConfig
+metadata:
+  name: zuul-web-backendconfig
+spec:
+  timeoutSec: 3600
 ---
 apiVersion: extensions/v1beta1
 kind: Ingress
