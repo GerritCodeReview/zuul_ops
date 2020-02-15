@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b339eee6_06b5188d",
+        "filename": "zuul/main.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2020-02-15T06:48:36Z",
+      "side": 1,
+      "message": "Is the name referred to here the full name as shown in the lists below, i.e. including the directory prefix, or only the \u0027basename\u0027 part?  The reason I ask is that we have \"plugins/gitiles\" below, and I wonder what will happen if we also want to add \"gitiles\".",
+      "range": {
+        "startLine": 12,
+        "startChar": 12,
+        "endLine": 14,
+        "endChar": 23
+      },
+      "revId": "69c6f1469f8b51e77818ca6364d5502c27d83718",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
