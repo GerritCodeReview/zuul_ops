@@ -46,6 +46,30 @@
       "revId": "69c6f1469f8b51e77818ca6364d5502c27d83718",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4a1a5f78_173c5a26",
+        "filename": "zuul/main.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1087826
+      },
+      "writtenOn": "2020-02-19T17:27:30Z",
+      "side": 1,
+      "message": "Oh sorry I missed the notification email for this comment.  It\u0027s the full name including the directory prefix, so in all cases, Zuul should recognize \u0027gitiles\u0027 as distinct from \u0027plugin/gitiles\u0027.  When it checks them out, it uses the golang-style source path, so a job that checked out both of those projects would end up with \u0027src/gerrit.googlecode.com/gitiles\u0027 and \u0027src/gerrit.googlecode.com/plugins/gitiles\u0027.\n\nAs an aside, it also handles the case of having a project with the same name from two different sources (so gerrit.googlecode.com/gerrit and example.com/gerrit are also distinct).",
+      "parentUuid": "5b443031_e3bc761c",
+      "range": {
+        "startLine": 12,
+        "startChar": 12,
+        "endLine": 14,
+        "endChar": 23
+      },
+      "revId": "69c6f1469f8b51e77818ca6364d5502c27d83718",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
