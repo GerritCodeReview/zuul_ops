@@ -22,6 +22,30 @@
       "revId": "69c6f1469f8b51e77818ca6364d5502c27d83718",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5b443031_e3bc761c",
+        "filename": "zuul/main.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1002666
+      },
+      "writtenOn": "2020-02-19T16:46:10Z",
+      "side": 1,
+      "message": "In case it wasn\u0027t obvious what David means, https://gerrit.googlesource.com/plugins/gitiles and https://gerrit.googlesource.com/gitiles both exist and are valid (and different) projects.",
+      "parentUuid": "b339eee6_06b5188d",
+      "range": {
+        "startLine": 12,
+        "startChar": 12,
+        "endLine": 14,
+        "endChar": 23
+      },
+      "revId": "69c6f1469f8b51e77818ca6364d5502c27d83718",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
