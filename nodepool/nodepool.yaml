@@ -19,10 +19,18 @@ providers:
         max-servers: 8
         use-internal-ip: True
         labels:
+          - name: testlabel
+            instance-type: f1-micro
+            cloud-image: debian-stretch
+            volume-type: standard
+            volume-size: 10
           - name: debian-stretch-8G
             instance-type: n1-standard-2
             cloud-image: debian-stretch
+            volume-type: standard
             volume-size: 40
 labels:
+  - name: testlabel
+    min-ready: 1
   - name: debian-stretch-8G
     min-ready: 1
