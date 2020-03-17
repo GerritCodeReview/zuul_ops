@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "353ca5de_a9ef1e4c",
+        "filename": "playbooks/library/update_checkers.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-03-17T15:18:42Z",
+      "side": 1,
+      "message": "Interesting, so this is the way to get an access token valid for Gerrit APIs?\nHow Google is authenticating the call to get the token?",
+      "range": {
+        "startLine": 60,
+        "startChar": 0,
+        "endLine": 62,
+        "endChar": 32
+      },
+      "revId": "73072d27363276bcfe377f825351408bca70cc5c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
