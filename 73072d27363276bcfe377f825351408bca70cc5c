@@ -22,6 +22,23 @@
       "revId": "73072d27363276bcfe377f825351408bca70cc5c",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ca97b092_51dd9c54",
+        "filename": "playbooks/library/update_checkers.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 62,
+      "author": {
+        "id": 1087826
+      },
+      "writtenOn": "2020-03-17T16:16:09Z",
+      "side": 1,
+      "message": "Yes, and we pass it to Gerrit as a cookie.\n\nThe k8s pods are using the new \"workload identity\" feature, which means that each individual pod is associated with a k8s service account, which is then associated with a Google cloud service account.  The Zuul scheduler pod is associated with the \"zuul\" k8s service account:\n\nhttps://gerrit.googlesource.com/zuul/ops/+/refs/heads/master/k8s/zuul.yaml#279\n\nWhich is associted with the \"zuul\" GCP service account:\n\nhttps://gerrit.googlesource.com/zuul/ops/+/refs/heads/master/README#91\n\nWhich is the account associated with the \"Zuul\" user in Gerrit.\n\nAnd through some magic on the backend in GCP, when a request to the internal metadata service is made from the scheduler pod, it returns the token for that service account.  If we make the same request from a different pod, it will return a token for a different account (the scheduler pod is the only one associated with the Zuul service account).\n\nThat\u0027s why this job runs runs the script on the scheduler pod, in order to get access to that credential.  Most jobs are unable to do that, but jobs in this repo have a credential to access the k8s cluster in order to drive the deployment.",
+      "revId": "73072d27363276bcfe377f825351408bca70cc5c",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
