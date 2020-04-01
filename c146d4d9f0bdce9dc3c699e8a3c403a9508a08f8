@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ec7d16f3_19fd243f",
+        "filename": "k8s/nodepool.yaml",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1010246
+      },
+      "writtenOn": "2020-04-01T18:20:00Z",
+      "side": 1,
+      "message": "Test comment.",
+      "revId": "c146d4d9f0bdce9dc3c699e8a3c403a9508a08f8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
