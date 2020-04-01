@@ -33,4 +33,8 @@ providers:
             volume-size: 40
 labels:
   - name: debian-stretch-8G
-    min-ready: 1
+    min-ready: 0
+  - name: debian-stretch-30G
+    min-ready: 0
+  - name: debian-stretch-60G
+    min-ready: 0
