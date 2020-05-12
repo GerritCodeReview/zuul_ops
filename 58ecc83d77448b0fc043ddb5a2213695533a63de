@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "defec21c_40e87017",
+        "filename": "checkers.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-05-12T22:41:37Z",
+      "side": 1,
+      "message": "Can we also add another checker for the code-style verification?\n(google-java-format)",
+      "revId": "58ecc83d77448b0fc043ddb5a2213695533a63de",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c1f97f21_3f015b1d",
+        "filename": "zuul/main.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-05-12T22:41:37Z",
+      "side": 1,
+      "message": "Does it make sense to split the projects in two logical groups?\n\n1. Core projects (Gerrit + JGit + core-plugins)\n2. Non-core projects (non-core plugins)",
+      "range": {
+        "startLine": 21,
+        "startChar": 10,
+        "endLine": 21,
+        "endChar": 31
+      },
+      "revId": "58ecc83d77448b0fc043ddb5a2213695533a63de",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
