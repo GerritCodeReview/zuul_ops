@@ -18,6 +18,7 @@
           - gerrit
           - jgit
           - plugins/checks
+          - plugins/code-owners
           - plugins/codemirror-editor
           - plugins/commit-message-length-validator
           - plugins/delete-project
