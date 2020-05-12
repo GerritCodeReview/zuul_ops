@@ -88,3 +88,10 @@ checkers:
     repository: "plugins/webhooks"
     name: "Zuul Check Pipeline"
     description: "Run Zuul jobs on new patchsets"
+
+# Other plugins:
+
+  - uuid: "zuul-check:plugins_code-owners"
+    repository: "plugins/code-owners"
+    name: "Zuul Check Pipeline"
+    description: "Run Zuul jobs on new patchsets"
