@@ -73,6 +73,23 @@
       "revId": "58ecc83d77448b0fc043ddb5a2213695533a63de",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f9f4f33e_aaa327b6",
+        "filename": "zuul/main.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1087826
+      },
+      "writtenOn": "2020-05-14T14:15:49Z",
+      "side": 1,
+      "message": "Actually, I\u0027ll revise this.",
+      "revId": "58ecc83d77448b0fc043ddb5a2213695533a63de",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
