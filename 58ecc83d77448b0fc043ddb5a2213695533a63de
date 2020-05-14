@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "91c0e0fe_5e09805a",
+        "filename": "checkers.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 1087826
+      },
+      "writtenOn": "2020-05-14T14:14:11Z",
+      "side": 1,
+      "message": "Do you mean you want Zuul to run that, or another system?",
+      "revId": "58ecc83d77448b0fc043ddb5a2213695533a63de",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c1f97f21_3f015b1d",
         "filename": "zuul/main.yaml",
         "patchSetId": 2
@@ -39,6 +56,23 @@
       "revId": "58ecc83d77448b0fc043ddb5a2213695533a63de",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "00e39a9b_500fb76c",
+        "filename": "zuul/main.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1087826
+      },
+      "writtenOn": "2020-05-14T14:14:11Z",
+      "side": 1,
+      "message": "Sure, we can do that.  There is one implication of the ordering here: job names are global, and so if someone adds jobs with the same name to two repos, the one earlier in the list will \"win\" and the second will generate an error.  This is normally not possible in a gating setup, but can happen here since we aren\u0027t gating.  Anyway, it\u0027s not likely to happen in practice, and that behavior is a good reason to organize as you suggest.  I\u0027ll make a followup.",
+      "revId": "58ecc83d77448b0fc043ddb5a2213695533a63de",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
