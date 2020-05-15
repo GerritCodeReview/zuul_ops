@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "677486a8_2ed4202b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-05-15T13:46:33Z",
+      "side": 1,
+      "message": "Thanks again James for the clarifications. Apologies Edwin for hijacking your change comments, but it was useful for understanding how Zuul works from a real-life example scenario.",
+      "revId": "9016bd7bdf11e9878633c79f28c4cc4dbfd67ed8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e1f3a90e_026450c2",
         "filename": "zuul/main.yaml",
         "patchSetId": 3
@@ -137,6 +154,24 @@
       "writtenOn": "2020-05-15T13:38:57Z",
       "side": 1,
       "message": "Zuul always respects Depends-On for changes it knows about, but depending on the circumstances, the behavior may be slightly different.  If change B Depends-On: change A, then:\n\n* Zuul will never merge change B unless change A is merged.  This requires a gate pipeline, which we don\u0027t have here, so at the moment, we won\u0027t observe this behavior.\n* Zuul will never enqueue change B into a gate pipeline unless change A is either merged or is enqueued ahead of it.  This also obviously requires a gate pipeline.\n* If the changes are both for untrusted projects (the list starting here at line 15), then Zuul will check out change A when it tests change B, so change B can depend on a code change in A, or even a Zuul configuration change.  We can observe this behavior in a check pipeline like we have in this system.\n\nZuul only supports an acyclic graph for change dependencies at the moment, meaning that it is strictly ordered.  Since this Gerrit has submit-whole-topic enabled, that\u0027s a slightly different behavior than what Zuul does.  There is work in progress to support cyclic dependencies and therefore  simultaneous testing and merging of changes as a group, which would match the submit-whole-topic behavior, but that is not yet complete.\n\nI think it might be interesting in this situation to experiment with using both as you suggest -- Depends-On to ensure that Zuul tests related changes together, and a topic to ensure they aren\u0027t submitted until they are all ready.",
+      "revId": "9016bd7bdf11e9878633c79f28c4cc4dbfd67ed8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9616d1f2_64ce0302",
+        "filename": "zuul/main.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-05-15T13:46:33Z",
+      "side": 1,
+      "message": "\u003e Zuul always respects Depends-On for changes it knows about, but depending on the circumstances, the behavior may be slightly different.  If change B Depends-On: change A, then:\n\u003e \n\u003e * Zuul will never merge change B unless change A is merged.  This requires a gate pipeline, which we don\u0027t have here, so at the moment, we won\u0027t observe this behavior.\n\u003e * Zuul will never enqueue change B into a gate pipeline unless change A is either merged or is enqueued ahead of it.  This also obviously requires a gate pipeline.\n\nYep, that was my understanding as well. I may also start adopting the gate pipeline in the future, but we would need to have higher mileage of the Zuul change validation pipeline. We have still a gap on Docker and Chrome validations at the moment, but I am sure we can get there :-)\n\n\u003e * If the changes are both for untrusted projects (the list starting here at line 15), then Zuul will check out change A when it tests change B, so change B can depend on a code change in A, or even a Zuul configuration change.  We can observe this behavior in a check pipeline like we have in this system.\n\nCool, that\u0027s exactly what we would need. Imagine that I need a change on Gerrit core (e.g. InstanceId we are development right now) and a corresponding change on a plugin that uses it (e.g. multi-site): then Zuul would be able to get the right versions and validate them together.\n\nIf we automate the generation of a topic, we would also make sure that they are merged together.\n\n\u003e I think it might be interesting in this situation to experiment with using both as you suggest -- Depends-On to ensure that Zuul tests related changes together, and a topic to ensure they aren\u0027t submitted until they are all ready.\n\nYes, maybe from Depends-On to topic would be easier. (e.g. zuul-\u003cUUID\u003e).",
+      "parentUuid": "b6598424_d86832b8",
       "revId": "9016bd7bdf11e9878633c79f28c4cc4dbfd67ed8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
