@@ -123,6 +123,23 @@
       "revId": "9016bd7bdf11e9878633c79f28c4cc4dbfd67ed8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b6598424_d86832b8",
+        "filename": "zuul/main.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1087826
+      },
+      "writtenOn": "2020-05-15T13:38:57Z",
+      "side": 1,
+      "message": "Zuul always respects Depends-On for changes it knows about, but depending on the circumstances, the behavior may be slightly different.  If change B Depends-On: change A, then:\n\n* Zuul will never merge change B unless change A is merged.  This requires a gate pipeline, which we don\u0027t have here, so at the moment, we won\u0027t observe this behavior.\n* Zuul will never enqueue change B into a gate pipeline unless change A is either merged or is enqueued ahead of it.  This also obviously requires a gate pipeline.\n* If the changes are both for untrusted projects (the list starting here at line 15), then Zuul will check out change A when it tests change B, so change B can depend on a code change in A, or even a Zuul configuration change.  We can observe this behavior in a check pipeline like we have in this system.\n\nZuul only supports an acyclic graph for change dependencies at the moment, meaning that it is strictly ordered.  Since this Gerrit has submit-whole-topic enabled, that\u0027s a slightly different behavior than what Zuul does.  There is work in progress to support cyclic dependencies and therefore  simultaneous testing and merging of changes as a group, which would match the submit-whole-topic behavior, but that is not yet complete.\n\nI think it might be interesting in this situation to experiment with using both as you suggest -- Depends-On to ensure that Zuul tests related changes together, and a topic to ensure they aren\u0027t submitted until they are all ready.",
+      "revId": "9016bd7bdf11e9878633c79f28c4cc4dbfd67ed8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
