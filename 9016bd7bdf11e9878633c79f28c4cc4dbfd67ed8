@@ -105,6 +105,24 @@
       "revId": "9016bd7bdf11e9878633c79f28c4cc4dbfd67ed8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1d90e1aa_f46ebbc9",
+        "filename": "zuul/main.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-05-15T13:12:10Z",
+      "side": 1,
+      "message": "Thanks, Edwin. That means that the Depends-On was misplaced in this case, as Zuul would have no way to respect the dependency. Normally, instead, it should behave like the topic submission, right?\n\n@James if it wasn\u0027t for the Zuul restart needed, would the topic have worked as well? (assuming that we add both the topic and the Depends-On).\n\nI was thinking about the causes were we really need this in our Gerrit development lifecycle and how to automate the generation of \"Depends-On\" automatically based on the topic, or the other way around.\n\nWhen Zuul is used as a gating process, we do not need the topic because Zuul is going to submit the change anyway, so he will respect the Depends-On. For our use-case, instead, we do need the topic because we want to make sure that we merge *ONLY IF* all the dependent changes are mergeable and green.",
+      "parentUuid": "5ac80520_4e593a9b",
+      "revId": "9016bd7bdf11e9878633c79f28c4cc4dbfd67ed8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
