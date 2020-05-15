@@ -70,6 +70,24 @@
       "revId": "9016bd7bdf11e9878633c79f28c4cc4dbfd67ed8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5ac80520_4e593a9b",
+        "filename": "zuul/main.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1003935
+      },
+      "writtenOn": "2020-05-15T11:29:05Z",
+      "side": 1,
+      "message": "See comment from James at [1]:\n\n\"Luca, see the \"Depends-On\" change in the commit message, that\u0027s the change that will let Zuul know about the new project.  Unfortunately, that sort of change is one where we update the config file for the system and reload it, so it\u0027s not one that Zuul can dynamically evaluate.  We\u0027ll have to merge it first before this one will succeed.\"\n\nI read this as, Zuul normally respects the \"Depends-On\" footers, but this is a special case because we are changing the config which requires a system reload. Hence the changes need to be submitted in order.\n\n[1] https://gerrit-review.googlesource.com/c/zuul/config/+/267314/1/zuul.d/projects.yaml#81",
+      "parentUuid": "48bf6b1c_41652231",
+      "revId": "9016bd7bdf11e9878633c79f28c4cc4dbfd67ed8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
