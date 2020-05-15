@@ -16,6 +16,24 @@
       "revId": "9016bd7bdf11e9878633c79f28c4cc4dbfd67ed8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "c24f419b_03aaf228",
+        "filename": "zuul/main.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-05-15T10:52:23Z",
+      "side": 1,
+      "message": "Correct. It can be done as a follow-up change though.",
+      "parentUuid": "e1f3a90e_026450c2",
+      "revId": "9016bd7bdf11e9878633c79f28c4cc4dbfd67ed8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
