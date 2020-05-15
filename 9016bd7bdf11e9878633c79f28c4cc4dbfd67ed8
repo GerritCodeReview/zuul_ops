@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e1f3a90e_026450c2",
+        "filename": "zuul/main.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1003935
+      },
+      "writtenOn": "2020-05-15T06:43:52Z",
+      "side": 1,
+      "message": "[optional] The checks plugin is also not a core plugin, so it may be moved down to the other section too.",
+      "revId": "9016bd7bdf11e9878633c79f28c4cc4dbfd67ed8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
