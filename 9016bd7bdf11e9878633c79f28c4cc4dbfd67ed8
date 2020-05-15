@@ -52,6 +52,24 @@
       "revId": "9016bd7bdf11e9878633c79f28c4cc4dbfd67ed8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "48bf6b1c_41652231",
+        "filename": "zuul/main.yaml",
+        "patchSetId": 3
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-05-15T11:24:42Z",
+      "side": 1,
+      "message": "I believe I misunderstood how Zuul works with the Depends-On: I thought it was equivalent to the Gerrit topics and it would have tested both together.\n\nInstead is just an indication on the order of submission? I am still quite a notice user of Zuul.",
+      "parentUuid": "d3be572c_acee4163",
+      "revId": "9016bd7bdf11e9878633c79f28c4cc4dbfd67ed8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
