@@ -1,6 +1,7 @@
 # UUID                                                        	Group Name
 #
 100a400c37795b31dc0ef00c6500650c45e73a34                      	zuul-maintainers
+b49f61711e6c0148f9f4d90702015bb894289be9                      	gerrit-verifiers
 global:Anonymous-Users                                        	Anonymous Users
 global:Project-Owners                                         	Project Owners
 global:Registered-Users                                       	Registered Users
