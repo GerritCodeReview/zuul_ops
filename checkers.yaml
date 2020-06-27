@@ -91,6 +91,11 @@ checkers:
 
 # Other plugins:
 
+  - uuid: "zuul-check:plugins_oauth"
+    repository: "plugins/oauth"
+    name: "Zuul Check Pipeline"
+    description: "Run Zuul jobs on new patchsets"
+
   - uuid: "zuul-check:plugins_code-owners"
     repository: "plugins/code-owners"
     name: "Zuul Check Pipeline"
