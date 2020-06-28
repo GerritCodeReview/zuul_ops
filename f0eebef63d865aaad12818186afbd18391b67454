@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fe3da292_a5ff8e29",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-06-28T04:35:30Z",
+      "side": 1,
+      "message": "Will you add new job for lfs plugin to zuul/config as well?",
+      "revId": "f0eebef63d865aaad12818186afbd18391b67454",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
