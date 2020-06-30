@@ -34,6 +34,24 @@
       "revId": "bb3f37863c49a88085bd11fe20d20ac1947f74f7",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "779f60bd_8143c47a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2020-06-30T08:31:16Z",
+      "side": 1,
+      "message": "Mono-repo for its plugins was discussed before, but I don\u0027t remember the conclusion. Having a mono-repo would make things easier IMHO.\n\nThere is also a similar ongoing discussion about the metrics reporter plugins.",
+      "parentUuid": "a65b3600_8cd4b9ec",
+      "revId": "bb3f37863c49a88085bd11fe20d20ac1947f74f7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
