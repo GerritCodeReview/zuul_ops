@@ -16,6 +16,24 @@
       "revId": "bb3f37863c49a88085bd11fe20d20ac1947f74f7",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a65b3600_8cd4b9ec",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-06-30T08:26:35Z",
+      "side": 1,
+      "message": "It is self-contained but it is not a proper plugin but rather a library. However, it is built and packages \"as it was\" a plugin, so the job definition is fine.\n\nAll the other its-* plugins are an issue as I don\u0027t know yet how to validate them: they depend on its-base and should be built together.\n\nAny idea?\n\nP.S. I was also thinking about a mono-repo with all the its-* plugins, WDYT?",
+      "parentUuid": "4efa563b_196796c3",
+      "revId": "bb3f37863c49a88085bd11fe20d20ac1947f74f7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
