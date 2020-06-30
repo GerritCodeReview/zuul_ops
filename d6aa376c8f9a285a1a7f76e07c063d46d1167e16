@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1551aed2_3aa51671",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2020-06-30T05:50:32Z",
+      "side": 1,
+      "message": "This one can\u0027t be submitted; it\u0027s blocked by the preceding two changes that didn\u0027t get CR+2",
+      "revId": "d6aa376c8f9a285a1a7f76e07c063d46d1167e16",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
