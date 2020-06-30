@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1feb9f65_a761d03f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-06-30T05:47:05Z",
+      "side": 1,
+      "message": "Are we sure that we are adding only checker for plugins that can actually be built with Bazel? Otherwise, we would have to remove VRFY-1, if some change are uploaded to the plugins that cannot be built (compile failure) yet.",
+      "revId": "238f86a415459785800f2c0b536671ff6cc7722e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
