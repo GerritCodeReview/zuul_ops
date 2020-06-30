@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4efa563b_196796c3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-06-30T08:23:14Z",
+      "side": 1,
+      "message": "This is not a self contained plugin, but something that is used by its-jira plugins and friends. Its-jira build script should be extended to clone its-base repository.",
+      "revId": "bb3f37863c49a88085bd11fe20d20ac1947f74f7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
