@@ -16,6 +16,24 @@
       "revId": "238f86a415459785800f2c0b536671ff6cc7722e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "57d1dfe1_ac7cc2b6",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2020-06-30T05:48:13Z",
+      "side": 1,
+      "message": "yes, this batch of changes is only for projects that I know are buildable (they are part of the set of plugins curated by me and Marco)",
+      "parentUuid": "1feb9f65_a761d03f",
+      "revId": "238f86a415459785800f2c0b536671ff6cc7722e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
