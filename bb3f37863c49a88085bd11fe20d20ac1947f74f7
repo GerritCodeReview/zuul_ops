@@ -52,6 +52,24 @@
       "revId": "bb3f37863c49a88085bd11fe20d20ac1947f74f7",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "f6f6c64c_bc255b49",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2020-06-30T09:08:52Z",
+      "side": 1,
+      "message": "\u003e P.S. I was also thinking about a mono-repo with all the its-* plugins, WDYT?\n\nI am not maintainer of its-* plugins, but my feeling is against mono repos.\n\nThe same justification as not to make all plugins core plugins: maintenance burden.\n\nMany its-plugins are not maintained anymore its-redmine, its-rtc, others? That would mean additional burden for maintainers of currently maintained its-* plugins.\n\n\u003e All the other its-* plugins are an issue as I don\u0027t know yet how to validate them: they depend on its-base and should be built together.\n\nThe same what James did for plugin-manager: to list addtional repositories to clone? I can look into adding this.",
+      "parentUuid": "779f60bd_8143c47a",
+      "revId": "bb3f37863c49a88085bd11fe20d20ac1947f74f7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
