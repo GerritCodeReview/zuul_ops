@@ -18,6 +18,18 @@ providers:
       - name: main
         max-servers: 4
         use-internal-ip: True
+        # Host key checking is disabled because:
+        # 1) We're using the internal IP so it's slightly less
+        # valuable (fewer attack vectors).
+        # 2) The images we're using appear to have a key baked into
+        # them which is overwritten at boot.  Because we're using the
+        # internal IP, nodepool can end up connecting to the instance
+        # very quickly and retrieving the original host key rather
+        # than the new one (which is likely to be written a couple of
+        # seconds later).  By disabling this in nodepool, we let Zuul
+        # just use the first key it finds (and it's likely to take
+        # long enough that it have been updated by then).
+        host-key-checking: False
         labels:
           - name: debian-stretch-8G
             instance-type: n1-standard-2
