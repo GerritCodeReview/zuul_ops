@@ -1,0 +1,11 @@
+This directory contains deployment code for Zookeeper.
+
+The file `certs.yaml` is manually created and contains instructions
+for creating TLS certs for Zookeeper.
+
+The file `zookeeper.yaml` is the output of the Zookeeper Helm chart
+with https://github.com/helm/charts/pull/23480 applied and
+`values.yaml` as input.
+
+Once that PR is merged, we can switch to using the plain upstream Helm
+chart.

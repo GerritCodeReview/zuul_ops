@@ -1,4 +1,17 @@
 ---
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: zookeeper-client
+  namespace: zuul
+spec:
+  keyEncoding: pkcs8
+  secretName: zookeeper-client-tls
+  commonName: client
+  issuerRef:
+    name: ca-issuer
+    kind: ClusterIssuer
+---
 apiVersion: cloud.google.com/v1beta1
 kind: BackendConfig
 metadata:
@@ -114,10 +127,16 @@ spec:
         volumeMounts:
         - name: zuul-config
           mountPath: /etc/zuul
+        - name: zookeeper-client-tls
+          mountPath: /tls/client
+          readOnly: true
       volumes:
       - name: zuul-config
         secret:
           secretName: zuul-config
+      - name: zookeeper-client-tls
+        secret:
+          secretName: zookeeper-client-tls
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -157,10 +176,16 @@ spec:
         volumeMounts:
         - name: zuul-config
           mountPath: /etc/zuul
+        - name: zookeeper-client-tls
+          mountPath: /tls/client
+          readOnly: true
       volumes:
       - name: zuul-config
         secret:
           secretName: zuul-config
+      - name: zookeeper-client-tls
+        secret:
+          secretName: zookeeper-client-tls
 ---
 apiVersion: apps/v1
 kind: StatefulSet
@@ -210,6 +235,9 @@ spec:
           mountPath: /var/lib/zuul
         - name: nodepool-private-key
           mountPath: /var/lib/zuul/ssh
+        - name: zookeeper-client-tls
+          mountPath: /tls/client
+          readOnly: true
         securityContext:
           privileged: true
       volumes:
@@ -225,6 +253,9 @@ spec:
       - name: nodepool-private-key
         secret:
           secretName: nodepool-private-key
+      - name: zookeeper-client-tls
+        secret:
+          secretName: zookeeper-client-tls
 ---
 apiVersion: apps/v1
 kind: StatefulSet
@@ -269,6 +300,9 @@ spec:
           mountPath: /etc/zuul/tenant
         - name: zuul-scheduler
           mountPath: /var/lib/zuul
+        - name: zookeeper-client-tls
+          mountPath: /tls/client
+          readOnly: true
       volumes:
       - name: zuul-config
         secret:
@@ -276,6 +310,9 @@ spec:
       - name: zuul-tenant-config
         secret:
           secretName: zuul-tenant-config
+      - name: zookeeper-client-tls
+        secret:
+          secretName: zookeeper-client-tls
       serviceAccountName: zuul
   volumeClaimTemplates:
   - metadata:

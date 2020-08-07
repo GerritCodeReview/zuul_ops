@@ -34,8 +34,14 @@ spec:
         volumeMounts:
         - name: nodepool-config
           mountPath: /etc/nodepool
+        - name: zookeeper-client-tls
+          mountPath: /tls/client
+          readOnly: true
       volumes:
       - name: nodepool-config
         secret:
           secretName: nodepool-gcs
+      - name: zookeeper-client-tls
+        secret:
+          secretName: zookeeper-client-tls
       serviceAccountName: nodepool
