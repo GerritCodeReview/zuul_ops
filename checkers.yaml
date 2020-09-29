@@ -91,11 +91,6 @@ checkers:
 
 # Other plugins:
 
-  - uuid: "zuul-check:modules_cache-chroniclemap"
-    repository: "modules/cache-chroniclemap"
-    name: "Zuul Check Pipeline"
-    description: "Run Zuul jobs on new patchsets"
-
   - uuid: "zuul-check:plugins_admin-console"
     repository: "plugins/admin-console"
     name: "Zuul Check Pipeline"
