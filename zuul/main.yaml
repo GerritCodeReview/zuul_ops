@@ -43,7 +43,6 @@
           - plugins/go-import
           - plugins/healthcheck
           - plugins/heartbeat
-          - plugins/high-availability
           - plugins/imagare
           - plugins/its-base
           - plugins/javamelody
