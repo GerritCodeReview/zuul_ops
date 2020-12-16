@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ec019479_5ccdac44",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010788
+      },
+      "writtenOn": "2020-12-16T09:50:31Z",
+      "side": 1,
+      "message": "That adds CI via Zuul which I am familiar with :]\n\nThe related config change is https://gerrit-review.googlesource.com/c/zuul/config/+/291662",
+      "revId": "b1364ba39927e8ab1795b4b2590d078ad286f4ac",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
