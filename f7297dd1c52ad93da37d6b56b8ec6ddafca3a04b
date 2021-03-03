@@ -16,6 +16,24 @@
       "message": "Is it already deployed?\n\nIf I klick RUN button on change 77290, the Zuul build is not starting.",
       "revId": "f7297dd1c52ad93da37d6b56b8ec6ddafca3a04b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f654cfcc_93d30789",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-03-03T22:39:14Z",
+      "side": 1,
+      "message": "I got the mail:\n\n  The combined check state has been updated to NOT_RELEVANT for patch set 3 of this change.",
+      "parentUuid": "3c303a15_b81117b2",
+      "revId": "f7297dd1c52ad93da37d6b56b8ec6ddafca3a04b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
