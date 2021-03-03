@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3c303a15_b81117b2",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011323
+      },
+      "writtenOn": "2021-03-03T22:38:22Z",
+      "side": 1,
+      "message": "Is it already deployed?\n\nIf I klick RUN button on change 77290, the Zuul build is not starting.",
+      "revId": "f7297dd1c52ad93da37d6b56b8ec6ddafca3a04b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
