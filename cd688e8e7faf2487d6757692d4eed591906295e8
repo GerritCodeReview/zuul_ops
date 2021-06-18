@@ -53,6 +53,24 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "3e0e1d61_ac6eec4b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-06-18T07:57:10Z",
+      "side": 1,
+      "message": "SGTM +1",
+      "parentUuid": "4177290e_8febd9bd",
+      "revId": "cd688e8e7faf2487d6757692d4eed591906295e8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7882be07_35703e29",
@@ -102,6 +120,30 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "5e41fba4_6e1b7503",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-06-18T07:57:10Z",
+      "side": 1,
+      "message": "+1",
+      "parentUuid": "74f9ffc5_081128b8",
+      "range": {
+        "startLine": 18,
+        "startChar": 53,
+        "endLine": 18,
+        "endChar": 54
+      },
+      "revId": "cd688e8e7faf2487d6757692d4eed591906295e8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "752b829e_6ec17cb9",
         "filename": "README.md",
         "patchSetId": 1
@@ -137,6 +179,30 @@
       "side": 1,
       "message": "Agreed; so far I\u0027ve been lucky enough that I have been able to diagnose problems with the contents of the buffer; however, Zuul logs are pretty verbose, even at info level (which is what we\u0027re running at).",
       "parentUuid": "752b829e_6ec17cb9",
+      "range": {
+        "startLine": 55,
+        "startChar": 4,
+        "endLine": 55,
+        "endChar": 41
+      },
+      "revId": "cd688e8e7faf2487d6757692d4eed591906295e8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2bf17d17_ac22239e",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-06-18T07:57:10Z",
+      "side": 1,
+      "message": "Also, the fact that Zuul uses unique IDs for jobs executions is really useful to grep that information across multiple deployments and pods.\n\nBy using kubectl instead you would need to query each one of them, making correlation very difficult.\n\n@Han-Wen StackDriver is a pretty much standard tool on GCloud, can you investigate internally if that can be allowed to us?",
+      "parentUuid": "4d58f7d5_c346a622",
       "range": {
         "startLine": 55,
         "startChar": 4,
@@ -242,6 +308,30 @@
       "side": 1,
       "message": "The nodepool-launcher will automatically delete those when it restarts.  We should add that information (and maybe some commands for displaying nodepool status) to this doc.",
       "parentUuid": "0cdeb07e_6e77677a",
+      "range": {
+        "startLine": 94,
+        "startChar": 4,
+        "endLine": 94,
+        "endChar": 65
+      },
+      "revId": "cd688e8e7faf2487d6757692d4eed591906295e8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e80e122b_eea55431",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-06-18T07:57:10Z",
+      "side": 1,
+      "message": "That\u0027s great to know.",
+      "parentUuid": "2e62943f_987b8701",
       "range": {
         "startLine": 94,
         "startChar": 4,
