@@ -16,6 +16,155 @@
       "message": "Haven\u0027t tried the power-cycle instructions, but this looks good overall.",
       "revId": "cd688e8e7faf2487d6757692d4eed591906295e8",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "706cd862_289a213e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-06-18T00:44:23Z",
+      "side": 1,
+      "message": "Thanks, James, very useful indeed. Can we also do a hands-on session together and record it?",
+      "revId": "cd688e8e7faf2487d6757692d4eed591906295e8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7882be07_35703e29",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-06-18T00:44:23Z",
+      "side": 1,
+      "message": "Nit: empty space at EOL.\n\nP.S. Should we check this automatically in the CI?",
+      "range": {
+        "startLine": 18,
+        "startChar": 53,
+        "endLine": 18,
+        "endChar": 54
+      },
+      "revId": "cd688e8e7faf2487d6757692d4eed591906295e8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "752b829e_6ec17cb9",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-06-18T00:44:23Z",
+      "side": 1,
+      "message": "This is good for getting the latest N log lines, but it is impractical for search back in time and understand what happened.\n\n@Han-Wen can you authorise us to access StackDriver? [1]\n\n[1] https://cloud.google.com/products/operations",
+      "range": {
+        "startLine": 55,
+        "startChar": 4,
+        "endLine": 55,
+        "endChar": 41
+      },
+      "revId": "cd688e8e7faf2487d6757692d4eed591906295e8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4518d164_8dfb7e31",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-06-18T00:44:23Z",
+      "side": 1,
+      "message": "How do you tell the zuul-executor which job to run? Would that apply to all jobs executed by that executor?",
+      "revId": "cd688e8e7faf2487d6757692d4eed591906295e8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f1ec6667_7dda07bf",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-06-18T00:44:23Z",
+      "side": 1,
+      "message": "nit: empty space",
+      "range": {
+        "startLine": 85,
+        "startChar": 0,
+        "endLine": 85,
+        "endChar": 1
+      },
+      "revId": "cd688e8e7faf2487d6757692d4eed591906295e8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0cdeb07e_6e77677a",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-06-18T00:44:23Z",
+      "side": 1,
+      "message": "Would this also remove the associated GCloud VMs created or should we remove them manually?",
+      "range": {
+        "startLine": 94,
+        "startChar": 4,
+        "endLine": 94,
+        "endChar": 65
+      },
+      "revId": "cd688e8e7faf2487d6757692d4eed591906295e8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b6c62b89_1880eb57",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-06-18T00:44:23Z",
+      "side": 1,
+      "message": "Is it possible to use Google Cloud DB instead?",
+      "range": {
+        "startLine": 138,
+        "startChar": 0,
+        "endLine": 147,
+        "endChar": 0
+      },
+      "revId": "cd688e8e7faf2487d6757692d4eed591906295e8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
