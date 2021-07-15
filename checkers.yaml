@@ -131,6 +131,11 @@ checkers:
     name: "Zuul Check Pipeline"
     description: "Run Zuul jobs on new patchsets"
 
+  - uuid: "zuul-check:plugins_depends-on"
+    repository: "plugins/depends-on"
+    name: "Zuul Check Pipeline"
+    description: "Run Zuul jobs on new patchsets"
+
   - uuid: "zuul-check:plugins_events"
     repository: "plugins/events"
     name: "Zuul Check Pipeline"

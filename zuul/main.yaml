@@ -39,6 +39,7 @@
           - plugins/changemessage
           - plugins/checks
           - plugins/code-owners
+          - plugins/depends-on
           - plugins/events
           - plugins/events-log
           - plugins/gc-conductor
