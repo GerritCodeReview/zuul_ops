@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "093ab7f9_03f6d503",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1087826
+      },
+      "writtenOn": "2021-08-24T16:40:38Z",
+      "side": 1,
+      "message": "test commit message",
+      "revId": "6c54c120803e64f2d902e5b59c388848d69ce11a",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "fed258a0_04045b99",
