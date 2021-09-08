@@ -113,6 +113,23 @@ in order for it to work.
 (Note: Our current focus of Zuul development is an HA scheduler so
 that all of Zuul can be restarted in a rolling fashion.)
 
+## Force Reconfiguration
+
+Zuul normally sees changes to in-repo config files and immediately
+updates its configuration.  However, if something goes wrong and Zuul
+somehow misses such an event, you can tell it to reload its config
+from scratch with this command:
+
+    kubectl -n zuul exec zuul-scheduler-0 zuul-scheduler full-reconfigure
+
+This will pause Zuul's processing while it performs the
+reconfiguration, but it will not miss any events and will pick up
+where it left off.
+
+Note that there is currently a bug where Zuul will not see changes to
+its config files if those changes are due to merge commits (unless the
+.zuul.yaml file is changed as content in the merge commit).
+
 # Additional Help
 
 Feel free to contact James Blair (corvus) in Gerrit Slack, or the
