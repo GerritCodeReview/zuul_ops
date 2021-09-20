@@ -22,6 +22,30 @@
       },
       "revId": "8f8c1ec3bfe8cae7e6dd2d55c01c5bfb73f81577",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f5cb7a6e_ff8312c1",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 1002666
+      },
+      "writtenOn": "2021-09-20T18:17:42Z",
+      "side": 1,
+      "message": "If you look at the auto-merge resolution of that change, the yaml is unmodified.",
+      "parentUuid": "877e099d_40ce18f5",
+      "range": {
+        "startLine": 130,
+        "startChar": 59,
+        "endLine": 132,
+        "endChar": 0
+      },
+      "revId": "8f8c1ec3bfe8cae7e6dd2d55c01c5bfb73f81577",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
