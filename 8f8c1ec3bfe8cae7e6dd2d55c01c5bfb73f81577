@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "877e099d_40ce18f5",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 132,
+      "author": {
+        "id": 1117824
+      },
+      "writtenOn": "2021-09-20T14:27:29Z",
+      "side": 1,
+      "message": "this does not seem to be the case for following change :\n\nhttps://gerrit-review.googlesource.com/c/plugins/task/+/317462\n\nabove change is a merge change and changes .yaml file but zuul is still not able to see changes.",
+      "range": {
+        "startLine": 130,
+        "startChar": 59,
+        "endLine": 132,
+        "endChar": 0
+      },
+      "revId": "8f8c1ec3bfe8cae7e6dd2d55c01c5bfb73f81577",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
