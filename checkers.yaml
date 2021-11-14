@@ -310,3 +310,10 @@ checkers:
     repository: "plugins/zuul-results-summary"
     name: "Zuul Check Pipeline"
     description: "Run Zuul jobs on new patchsets"
+
+# Other projects.
+
+  - uuid: "zuul-check:git-repo"
+    repository: "git-repo"
+    name: "Zuul Check Pipeline"
+    description: "Run Zuul jobs on new patchsets"
