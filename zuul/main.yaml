@@ -31,6 +31,7 @@
           - plugins/webhooks
           - polymer-bridges
           # All of the rest of the projects, alphabetically sorted.
+          - git-repo
           - plugins/admin-console
           - plugins/autosubmitter
           - plugins/avatars-external
