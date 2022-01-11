@@ -65,6 +65,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "2db23a71_f31a527a",
+        "filename": "project.config",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1003935
+      },
+      "writtenOn": "2022-01-11T13:57:32Z",
+      "side": 1,
+      "message": "Ack.",
+      "parentUuid": "fb39dcf7_49945311",
+      "range": {
+        "startLine": 36,
+        "startChar": 15,
+        "endLine": 36,
+        "endChar": 61
+      },
+      "revId": "d92c468148a3d3ffcf94becb0088a45561a54e91",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1761768c_57188b72",
