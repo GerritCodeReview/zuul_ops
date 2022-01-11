@@ -41,6 +41,30 @@
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "fb39dcf7_49945311",
+        "filename": "project.config",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1091982
+      },
+      "writtenOn": "2022-01-11T13:56:27Z",
+      "side": 1,
+      "message": "I scripted these changes so that description is written as:\n  * Submit requirement for the \u0027$label_name\u0027 label\n  \nThat should be good enough for now instead of writing the descriptions one by one. Project owners can change the description as desired later.",
+      "parentUuid": "f3890082_1b5437ca",
+      "range": {
+        "startLine": 36,
+        "startChar": 15,
+        "endLine": 36,
+        "endChar": 61
+      },
+      "revId": "d92c468148a3d3ffcf94becb0088a45561a54e91",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1761768c_57188b72",
@@ -78,6 +102,30 @@
       "side": 1,
       "message": "Same for all the other changes but I\u0027ll only comment here.",
       "parentUuid": "1761768c_57188b72",
+      "range": {
+        "startLine": 37,
+        "startChar": 38,
+        "endLine": 37,
+        "endChar": 39
+      },
+      "revId": "d92c468148a3d3ffcf94becb0088a45561a54e91",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6feee514_c476192b",
+        "filename": "project.config",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1091982
+      },
+      "writtenOn": "2022-01-11T13:56:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8688d8cc_8aa47a6e",
       "range": {
         "startLine": 37,
         "startChar": 38,
