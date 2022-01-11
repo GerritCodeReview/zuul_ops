@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f736c8cd_7a8227b1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1003935
+      },
+      "writtenOn": "2022-01-11T13:37:01Z",
+      "side": 1,
+      "message": "LGTM (I don\u0027t have permissions to vote on this change)",
+      "revId": "d92c468148a3d3ffcf94becb0088a45561a54e91",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1761768c_57188b72",
