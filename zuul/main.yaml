@@ -16,6 +16,7 @@
           - zuul/ops
           # All of the core projects, alphabetically sorted.
           - gerrit
+          - gitiles
           - jgit
           - plugins/codemirror-editor
           - plugins/commit-message-length-validator
