@@ -19,6 +19,11 @@ providers:
         image-family: debian-9
         username: zuul
         key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDaTT3+Y6dIh221ZsQ0ki6VwGb6lzd1/CvIS8RX6ZNmxJTXS7UKlvhAVTbGQPtmjdIQbwUyEqZEvIm/bUBr7dNbyeMLiRiRtoN+u1Quq8OAes2N7nUKnjLjGjVnM2mvYHGWHRDbpAQCtmXtbiQkHkfLLzewb+MqntQZ57xap31qriTkv4rdnlMN4kElILb5E/8WOAAJXYrt3b1TrTXwZUx7is1OTa38I9jJTpUMCn2otWGH9LlfeUhz/z8ZPB21wgUZN9CF5NwwBanqCNXy0jHiumOGx9e7Hc7apt641KiDuRt0aWyE6No/aMe6hVYnFR3NMG3rBtortXl+R5birK8l zuul
+      - name: debian-buster
+        image-project: debian-cloud
+        image-family: debian-10
+        username: zuul
+        key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDaTT3+Y6dIh221ZsQ0ki6VwGb6lzd1/CvIS8RX6ZNmxJTXS7UKlvhAVTbGQPtmjdIQbwUyEqZEvIm/bUBr7dNbyeMLiRiRtoN+u1Quq8OAes2N7nUKnjLjGjVnM2mvYHGWHRDbpAQCtmXtbiQkHkfLLzewb+MqntQZ57xap31qriTkv4rdnlMN4kElILb5E/8WOAAJXYrt3b1TrTXwZUx7is1OTa38I9jJTpUMCn2otWGH9LlfeUhz/z8ZPB21wgUZN9CF5NwwBanqCNXy0jHiumOGx9e7Hc7apt641KiDuRt0aWyE6No/aMe6hVYnFR3NMG3rBtortXl+R5birK8l zuul
     pools:
       - name: main
         max-servers: 4
@@ -72,6 +77,42 @@ providers:
             instance-type: e2-standard-16
             cloud-image: debian-stretch
             volume-size: 40
+          - name: debian-buster-8G
+            instance-type: n1-standard-2
+            cloud-image: debian-buster
+            volume-size: 40
+          - name: debian-buster-30G
+            instance-type: n1-standard-8
+            cloud-image: debian-buster
+            volume-size: 40
+          - name: debian-buster-60G
+            instance-type: n1-standard-16
+            cloud-image: debian-buster
+            volume-size: 40
+          - name: debian-buster-n1-standard-2
+            instance-type: n1-standard-2
+            cloud-image: debian-buster
+            volume-size: 40
+          - name: debian-buster-n1-standard-8
+            instance-type: n1-standard-8
+            cloud-image: debian-buster
+            volume-size: 40
+          - name: debian-buster-n1-standard-16
+            instance-type: n1-standard-16
+            cloud-image: debian-buster
+            volume-size: 40
+          - name: debian-buster-e2-standard-2
+            instance-type: e2-standard-2
+            cloud-image: debian-buster
+            volume-size: 40
+          - name: debian-buster-e2-standard-8
+            instance-type: e2-standard-8
+            cloud-image: debian-buster
+            volume-size: 40
+          - name: debian-buster-e2-standard-16
+            instance-type: e2-standard-16
+            cloud-image: debian-buster
+            volume-size: 40
 
 labels:
   - name: debian-stretch-8G
@@ -91,4 +132,22 @@ labels:
   - name: debian-stretch-e2-standard-8
     min-ready: 0
   - name: debian-stretch-e2-standard-16
+    min-ready: 0
+  - name: debian-buster-8G
+    min-ready: 0
+  - name: debian-buster-30G
+    min-ready: 0
+  - name: debian-buster-60G
+    min-ready: 0
+  - name: debian-buster-n1-standard-2
+    min-ready: 0
+  - name: debian-buster-n1-standard-8
+    min-ready: 0
+  - name: debian-buster-n1-standard-16
+    min-ready: 0
+  - name: debian-buster-e2-standard-2
+    min-ready: 0
+  - name: debian-buster-e2-standard-8
+    min-ready: 0
+  - name: debian-buster-e2-standard-16
     min-ready: 0
