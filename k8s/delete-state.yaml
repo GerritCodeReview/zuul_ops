@@ -1,0 +1,33 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  namespace: zuul
+  name: zuul-delete-state
+spec:
+  template:
+    spec:
+      containers:
+      - name: zuul-delete-state
+        image: zuul/zuul-scheduler
+        command: ["bash", "-c", "echo 'yes' | zuul delete-state"]
+        volumeMounts:
+        - name: zuul-config
+          mountPath: /etc/zuul
+        - name: zuul-tenant-config
+          mountPath: /etc/zuul/tenant
+        - name: zookeeper-client-tls
+          mountPath: /tls/client
+          readOnly: true
+      volumes:
+      - name: zuul-config
+        secret:
+          secretName: zuul-config
+      - name: zuul-tenant-config
+        secret:
+          secretName: zuul-tenant-config
+      - name: zookeeper-client-tls
+        secret:
+          secretName: zookeeper-client-tls
+      serviceAccountName: zuul
+      restartPolicy: Never
+  backoffLimit: 4

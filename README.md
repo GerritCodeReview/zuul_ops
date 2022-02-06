@@ -130,11 +130,27 @@ Note that there is currently a bug where Zuul will not see changes to
 its config files if those changes are due to merge commits (unless the
 .zuul.yaml file is changed as content in the merge commit).
 
+## Deleting ZooKeeper State
+
+Zuul stores its runtime state in ZooKeeper.  In the case of a bug in
+Zuul or some other source of data corruption, it may be necessary to
+delete the state from ZooKeeper and restart the cluster.  To do this,
+stop all of the Pods and then run:
+
+    kubectl -n zuul apply -f k8s/delete-state.yaml
+
+This will run a k8s job to delete the state.  Once that pod has
+exited, run the following command to clean it up:
+
+    kubectl -n zuul delete job zuul-delete-state
+
+Then restart all of the Zuul services.
+
 # Additional Help
 
 Feel free to contact James Blair (corvus) in Gerrit Slack, or the
-wider Zuul community in #zuul on the OFTC IRC network, or the
-zuul-discuss@lists.zuul-ci.org mailing list.
+wider Zuul community at https://matrix.to/#/#zuul:opendev.org in
+Matrix, or the zuul-discuss@lists.zuul-ci.org mailing list.
 
 # Appendix: Manual steps for bootstrapping
 
