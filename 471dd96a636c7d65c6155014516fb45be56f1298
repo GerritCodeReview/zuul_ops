@@ -16,6 +16,24 @@
       "message": "I think you\u0027ll also need changes like https://gerrit-review.googlesource.com/c/zuul/jobs/+/328089 and https://gerrit-review.googlesource.com/c/zuul/config/+/328090 for this to work, but maybe those depend on this merging first?",
       "revId": "471dd96a636c7d65c6155014516fb45be56f1298",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1865dda3_b0b06e66",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1007145
+      },
+      "writtenOn": "2022-03-03T17:34:29Z",
+      "side": 1,
+      "message": "yeah, i have some work pending for those, but i think this one is required first",
+      "parentUuid": "cb82f369_662c3910",
+      "revId": "471dd96a636c7d65c6155014516fb45be56f1298",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
