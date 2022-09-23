@@ -320,6 +320,11 @@ checkers:
 
 # Other projects.
 
+  - uuid: "zuul-check:java-prettify"
+    repository: "java-prettify"
+    name: "Zuul Check Pipeline"
+    description: "Run Zuul jobs on new patchsets"
+
   - uuid: "zuul-check:git-repo"
     repository: "git-repo"
     name: "Zuul Check Pipeline"
