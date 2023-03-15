@@ -31,8 +31,11 @@
           - plugins/webhooks
           - polymer-bridges
           # All of the rest of the projects, alphabetically sorted.
+<<<<<<< PATCH SET (46eaf6 Revert "Add git-repo project")
+=======
           - git-repo
           - java-prettify
+>>>>>>> BASE      (117bf9 Add java-prettify to Zuul)
           - plugins/admin-console
           - plugins/autosubmitter
           - plugins/avatars-external

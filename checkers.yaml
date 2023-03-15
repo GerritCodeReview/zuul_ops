@@ -317,6 +317,8 @@ checkers:
     repository: "gitiles"
     name: "Zuul Check Pipeline"
     description: "Run Zuul jobs on new patchsets"
+<<<<<<< PATCH SET (46eaf6 Revert "Add git-repo project")
+=======
 
 # Other projects.
 
@@ -329,3 +331,4 @@ checkers:
     repository: "git-repo"
     name: "Zuul Check Pipeline"
     description: "Run Zuul jobs on new patchsets"
+>>>>>>> BASE      (117bf9 Add java-prettify to Zuul)
