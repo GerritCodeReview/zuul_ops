@@ -31,7 +31,6 @@
           - plugins/webhooks
           - polymer-bridges
           # All of the rest of the projects, alphabetically sorted.
-          - git-repo
           - java-prettify
           - plugins/admin-console
           - plugins/autosubmitter
