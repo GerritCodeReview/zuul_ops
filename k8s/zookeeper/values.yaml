@@ -17,7 +17,7 @@ updateStrategy:
 ## - https://github.com/kubernetes/contrib/blob/master/statefulsets/zookeeper/Makefile#L1
 image:
   repository: zookeeper     # Container image repository for zookeeper container.
-  tag: 3.5.5                # Container image tag for zookeeper container.
+  tag: 3.7.1                # Container image tag for zookeeper container.
   pullPolicy: IfNotPresent  # Image pull criteria for zookeeper container.
 
 service:
@@ -292,7 +292,7 @@ env:
   ## internal time.
   ZK_TICK_TIME: 2000
 
-  ZOO_AUTOPURGE_PURGEINTERVAL: 0
+  ZOO_AUTOPURGE_PURGEINTERVAL: 6
   ZOO_AUTOPURGE_SNAPRETAINCOUNT: 3
   ZOO_STANDALONE_ENABLED: false
 
