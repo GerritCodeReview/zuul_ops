@@ -16,6 +16,23 @@
       "message": "Indeed...\n\n    Required value: pathType must be specified",
       "revId": "c549b437893b3f3e67b27fc70e7a868556f385a3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3a90d41b_5d8e00ff",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011602
+      },
+      "writtenOn": "2023-06-08T15:35:32Z",
+      "side": 1,
+      "message": "https://kubernetes.io/docs/concepts/services-networking/ingress/#path-types",
+      "revId": "c549b437893b3f3e67b27fc70e7a868556f385a3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
