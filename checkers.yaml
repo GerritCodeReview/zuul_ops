@@ -176,6 +176,11 @@ checkers:
     name: "Zuul Check Pipeline"
     description: "Run Zuul jobs on new patchsets"
 
+  - uuid: "zuul-check:plugins_image-diff"
+    repository: "plugins/image-diff"
+    name: "Zuul Check Pipeline"
+    description: "Run Zuul jobs on new patchsets"
+
   - uuid: "zuul-check:plugins_its-base"
     repository: "plugins/its-base"
     name: "Zuul Check Pipeline"

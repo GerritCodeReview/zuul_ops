@@ -50,6 +50,7 @@
           - plugins/healthcheck
           - plugins/heartbeat
           - plugins/imagare
+          - plugins/image-diff
           - plugins/its-base
           - plugins/javamelody
           - plugins/lfs
