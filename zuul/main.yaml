@@ -11,7 +11,7 @@
         untrusted-projects:
           # Order matters here, in the case of conflicting job names,
           # the first wins, so give the global jobs repo(s)
-          # preference.
+          # preference
           - zuul/jobs
           - zuul/ops
           # All of the core projects, alphabetically sorted.
