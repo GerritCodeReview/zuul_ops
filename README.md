@@ -184,6 +184,7 @@ gcloud compute addresses create zuul-static-ip --global
 kubectl create namespace zuul
 
 ## Bind k8s service accounts to gcp service accounts
+
 kubectl create serviceaccount --namespace zuul logs
 kubectl create serviceaccount --namespace zuul nodepool
 kubectl create serviceaccount --namespace zuul zuul
