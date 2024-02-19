@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5a4268bb_88f2000c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010788
+      },
+      "writtenOn": "2024-02-19T15:03:03Z",
+      "side": 1,
+      "message": "Rebased to clear a \"conflict\" since the repository has `Allow content merges: False`",
+      "revId": "ecc858b860008461cabab31ee9a591a8f2427c60",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
