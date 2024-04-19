@@ -8,7 +8,7 @@ spec:
     spec:
       containers:
       - name: zuul-delete-state
-        image: zuul/zuul-scheduler
+        image: quay.io/zuul-ci/zuul-scheduler:latest
         command: ["bash", "-c", "echo 'yes' | zuul delete-state"]
         volumeMounts:
         - name: zuul-config

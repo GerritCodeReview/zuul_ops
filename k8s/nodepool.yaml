@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
       - name: launcher
-        image: zuul/nodepool-launcher:latest
+        image: quay.io/zuul-ci/nodepool-launcher:latest
         env:
         - name: OS_CLIENT_CONFIG_FILE
           value: /etc/nodepool/clouds.yaml
