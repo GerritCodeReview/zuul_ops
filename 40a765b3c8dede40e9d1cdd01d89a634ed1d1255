@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "e6d4c412_4c497374",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010788
+      },
+      "writtenOn": "2024-06-18T11:58:03Z",
+      "side": 1,
+      "message": "Looking at other changes in that repository, you also need to add it in `zuul/main.yaml` under `unstrusted-projects`",
+      "revId": "40a765b3c8dede40e9d1cdd01d89a634ed1d1255",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
