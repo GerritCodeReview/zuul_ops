@@ -186,6 +186,11 @@ checkers:
     name: "Zuul Check Pipeline"
     description: "Run Zuul jobs on new patchsets"
 
+  - uuid: "zuul-check:plugins_its-phabricator"
+    repository: "plugins/its-phabricator"
+    name: "Zuul Check Pipeline"
+    description: "Run Zuul jobs on new patchsets"
+
   - uuid: "zuul-check:plugins_javamelody"
     repository: "plugins/javamelody"
     name: "Zuul Check Pipeline"
