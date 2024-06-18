@@ -51,6 +51,7 @@
           - plugins/imagare
           - plugins/image-diff
           - plugins/its-base
+          - plugins/its-phabricator
           - plugins/javamelody
           - plugins/lfs
           - plugins/log-level
