@@ -251,8 +251,17 @@ spec:
       securityContext:
         fsGroup: 1000
         runAsUser: 1000
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchExpressions:
+                  - key: "app"
+                    operator: In
+                    values:
+                      - zookeeper
+              topologyKey: "kubernetes.io/hostname"
       containers:
-
         - name: zookeeper
           image: "zookeeper:3.7.1"
           imagePullPolicy: IfNotPresent
