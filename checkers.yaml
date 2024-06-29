@@ -186,6 +186,11 @@ checkers:
     name: "Zuul Check Pipeline"
     description: "Run Zuul jobs on new patchsets"
 
+  - uuid: "zuul-check:plugins_its-jira"
+    repository: "plugins/its-jira"
+    name: "Zuul Check Pipeline"
+    description: "Run Zuul jobs on new patchsets"
+
   - uuid: "zuul-check:plugins_its-phabricator"
     repository: "plugins/its-phabricator"
     name: "Zuul Check Pipeline"
