@@ -146,7 +146,7 @@ checkers:
     name: "Zuul Check Pipeline"
     description: "Run Zuul jobs on new patchsets"
 
-  - uuid: "zuul-check:plugins_gc-conductor-1"
+  - uuid: "zuul-check:plugins_gc-conductor"
     repository: "plugins/gc-conductor"
     name: "Zuul Check Pipeline"
     description: "Run Zuul jobs on new patchsets"
