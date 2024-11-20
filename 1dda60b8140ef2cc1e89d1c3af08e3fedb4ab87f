@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0edb3c2e_e88f8aef",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1002666
+      },
+      "writtenOn": "2024-11-20T18:44:27Z",
+      "side": 1,
+      "message": "Manually deployed with kubectl apply and it fixed the issue reported in https://discord.com/channels/775374026587373568/1211995364291379231/1308855247703113758",
+      "revId": "1dda60b8140ef2cc1e89d1c3af08e3fedb4ab87f",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
