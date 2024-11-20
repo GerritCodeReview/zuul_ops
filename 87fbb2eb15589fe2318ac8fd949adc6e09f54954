@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1a26a1a0_39ec5a28",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1087826
+      },
+      "writtenOn": "2024-11-20T19:51:54Z",
+      "side": 1,
+      "message": "FTR, we may also fix this in nodepool too with https://review.opendev.org/c/zuul/nodepool/+/935820",
+      "revId": "87fbb2eb15589fe2318ac8fd949adc6e09f54954",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
