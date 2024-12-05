@@ -16,6 +16,23 @@
       "message": "ping, can someone take a look and let me know if this looks correct?",
       "revId": "a6e72d565e0baf7b1b8576816cd9cee2806f7039",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "178dafbc_071b3994",
+        "filename": "zuul/zuul.conf",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1041506
+      },
+      "writtenOn": "2024-12-05T17:06:39Z",
+      "side": 1,
+      "message": "according to docs [1] \u0027{canonical_hostname}\u0027 doesn\u0027t seem to be a proper substitution (base_url?).\n\n[1] https://zuul-ci.org/docs/zuul/latest/drivers/gerrit.html#attr-%3Cgerrit%20connection%3E.gitweb_url_template",
+      "revId": "a6e72d565e0baf7b1b8576816cd9cee2806f7039",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
