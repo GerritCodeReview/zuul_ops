@@ -14,7 +14,7 @@ providers:
     zone: us-central1-a
     boot-timeout: 120
     cloud-images:
-      - name: debian-bullseye
+      - name: debian-bookwork
         image-project: debian-cloud
         image-family: debian-11
         username: zuul
@@ -36,59 +36,59 @@ providers:
         # long enough that it will have been updated by then).
         host-key-checking: False
         labels:
-          - name: debian-bullseye-8G
+          - name: debian-bookworm-8G
             instance-type: n1-standard-2
-            cloud-image: debian-bullseye
+            cloud-image: debian-bookworm
             volume-size: 40
-          - name: debian-bullseye-30G
+          - name: debian-bookworm-30G
             instance-type: n1-standard-8
-            cloud-image: debian-bullseye
+            cloud-image: debian-bookworm
             volume-size: 40
-          - name: debian-bullseye-60G
+          - name: debian-bookworm-60G
             instance-type: n1-standard-16
-            cloud-image: debian-bullseye
+            cloud-image: debian-bookworm
             volume-size: 40
-          - name: debian-bullseye-n1-standard-2
+          - name: debian-bookworm-n1-standard-2
             instance-type: n1-standard-2
-            cloud-image: debian-bullseye
+            cloud-image: debian-bookworm
             volume-size: 40
-          - name: debian-bullseye-n1-standard-8
+          - name: debian-bookworm-n1-standard-8
             instance-type: n1-standard-8
-            cloud-image: debian-bullseye
+            cloud-image: debian-bookworm
             volume-size: 40
-          - name: debian-bullseye-n1-standard-16
+          - name: debian-bookworm-n1-standard-16
             instance-type: n1-standard-16
-            cloud-image: debian-bullseye
+            cloud-image: debian-bookworm
             volume-size: 40
-          - name: debian-bullseye-e2-standard-2
+          - name: debian-bookworm-e2-standard-2
             instance-type: e2-standard-2
-            cloud-image: debian-bullseye
+            cloud-image: debian-bookworm
             volume-size: 40
-          - name: debian-bullseye-e2-standard-8
+          - name: debian-bookworm-e2-standard-8
             instance-type: e2-standard-8
-            cloud-image: debian-bullseye
+            cloud-image: debian-bookworm
             volume-size: 40
-          - name: debian-bullseye-e2-standard-16
+          - name: debian-bookworm-e2-standard-16
             instance-type: e2-standard-16
-            cloud-image: debian-bullseye
+            cloud-image: debian-bookworm
             volume-size: 40
 
 labels:
-  - name: debian-bullseye-8G
+  - name: debian-bookworm-8G
     min-ready: 0
-  - name: debian-bullseye-30G
+  - name: debian-bookworm-30G
     min-ready: 0
-  - name: debian-bullseye-60G
+  - name: debian-bookworm-60G
     min-ready: 0
-  - name: debian-bullseye-n1-standard-2
+  - name: debian-bookworm-n1-standard-2
     min-ready: 0
-  - name: debian-bullseye-n1-standard-8
+  - name: debian-bookworm-n1-standard-8
     min-ready: 0
-  - name: debian-bullseye-n1-standard-16
+  - name: debian-bookworm-n1-standard-16
     min-ready: 0
-  - name: debian-bullseye-e2-standard-2
+  - name: debian-bookworm-e2-standard-2
     min-ready: 0
-  - name: debian-bullseye-e2-standard-8
+  - name: debian-bookworm-e2-standard-8
     min-ready: 0
-  - name: debian-bullseye-e2-standard-16
+  - name: debian-bookworm-e2-standard-16
     min-ready: 0
