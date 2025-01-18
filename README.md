@@ -239,3 +239,25 @@ kubectl create clusterrolebinding zuul-deployment-cluster-admin-binding \
   --clusterrole cluster-admin \
   --user system:serviceaccount:zuul:zuul-deployment
 ```
+
+## Create a long-lived service account token for self-deployment
+```sh
+kubectl apply -f - <<EOF
+apiVersion: v1
+kind: Secret
+metadata:
+  name: zuul-deployment-secret
+  namespace: zuul
+  annotations:
+    kubernetes.io/service-account.name: zuul-deployment
+type: kubernetes.io/service-account-token
+EOF
+```
+
+Extract the token with:
+```sh
+kubectl -n zuul get secret/zuul-deployment-secret -o yaml
+```
+
+And decode the base64 value (to reveal another base64 value) and
+escrypt that as a Zuul secret.
