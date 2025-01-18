@@ -310,24 +310,10 @@ spec:
               value: "1099"
             - name: JMXSSL
               value: "false"
-            - name: ZK_SYNC_LIMIT
-              value: "10"
-            - name: ZK_TICK_TIME
-              value: "2000"
-            - name: ZOO_AUTOPURGE_PURGEINTERVAL
-              value: "6"
-            - name: ZOO_AUTOPURGE_SNAPRETAINCOUNT
+            - name: ZK_PURGE_INTERVAL
+              value: "2"
+            - name: ZK_SNAP_RETAIN_COUNT
               value: "3"
-            - name: ZOO_INIT_LIMIT
-              value: "5"
-            - name: ZOO_MAX_CLIENT_CNXNS
-              value: "60"
-            - name: ZOO_PORT
-              value: "2181"
-            - name: ZOO_STANDALONE_ENABLED
-              value: "false"
-            - name: ZOO_TICK_TIME
-              value: "2000"
           resources:
             {}
           volumeMounts:
