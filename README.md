@@ -170,10 +170,8 @@ Zuul.
 
 ## Install certmanager
 ```sh
-kubectl create namespace cert-manager
-kubectl label namespace cert-manager certmanager.k8s.io/disable-validation=true
-kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v0.12.0/cert-manager.yaml
-kubectl apply -n cert-manager -f letsencrypt.yaml
+kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.16.2/cert-manager.yaml
+kubectl apply -n cert-manager -f k8s/letsencrypt.yaml
 ```
 
 ## Install mariadb
