@@ -14,7 +14,7 @@ providers:
     zone: us-central1-a
     boot-timeout: 120
     cloud-images:
-      - name: debian-bookwork
+      - name: debian-bookworm
         image-project: debian-cloud
         image-family: debian-12
         username: zuul
