@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "44064a81_55544476",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3830894
+      },
+      "writtenOn": "2025-02-15T02:23:55Z",
+      "side": 1,
+      "message": "447885: Fix bookworm name | https://gerrit-review.googlesource.com/c/zuul/ops/+/447885",
+      "revId": "f10bb7ba071a5c2af1b53e5606c56bd16be070c9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
