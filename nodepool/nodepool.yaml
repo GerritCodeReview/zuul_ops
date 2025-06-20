@@ -21,7 +21,7 @@ providers:
         key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDaTT3+Y6dIh221ZsQ0ki6VwGb6lzd1/CvIS8RX6ZNmxJTXS7UKlvhAVTbGQPtmjdIQbwUyEqZEvIm/bUBr7dNbyeMLiRiRtoN+u1Quq8OAes2N7nUKnjLjGjVnM2mvYHGWHRDbpAQCtmXtbiQkHkfLLzewb+MqntQZ57xap31qriTkv4rdnlMN4kElILb5E/8WOAAJXYrt3b1TrTXwZUx7is1OTa38I9jJTpUMCn2otWGH9LlfeUhz/z8ZPB21wgUZN9CF5NwwBanqCNXy0jHiumOGx9e7Hc7apt641KiDuRt0aWyE6No/aMe6hVYnFR3NMG3rBtortXl+R5birK8l zuul
     pools:
       - name: main
-        max-servers: 4
+        max-servers: 1
         use-internal-ip: True
         # Host key checking is disabled because:
         # 1) We're using the internal IP so it's slightly less
