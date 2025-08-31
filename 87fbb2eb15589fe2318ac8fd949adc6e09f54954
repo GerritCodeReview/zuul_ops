@@ -16,6 +16,23 @@
       "message": "FTR, we may also fix this in nodepool too with https://review.opendev.org/c/zuul/nodepool/+/935820",
       "revId": "87fbb2eb15589fe2318ac8fd949adc6e09f54954",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c24d65a9_e6da7546",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4298808
+      },
+      "writtenOn": "2025-08-31T18:41:52Z",
+      "side": 1,
+      "message": "Siapapun orang yangbkasi izin kasi alamatku suruh datang di alamatku. Alamat ada di email ku biar saya kasi tau bagaimana cara menghargai privasinya orang lain kalau tidak ada kabarnya berarti bukan manusia .Ask the Chromium organizers, stop opening the forum on my Android phone. I\u0027ll report them.\nWhat do you want to do with the terms Chromium or Gerrit netizens? I\u0027ve never asked for money from netizens, nor have I ever asked for even a single rupiah from Chromium or Gerrit netizens. Those shameless people are already piggybacking on other people\u0027s Chrome, then block them and then impose restrictions. Damn, who owns an Android phone? Get out of here. Take that forum with you, and don\u0027t ever open the forum on my phone, you stupid, animal-hearted human. If only there were a reasonable salary. If there isn\u0027t one, why bother? Keep using the wrong people. This bitch. Damn, get out of the system, your member ID numbers. If you dare to talk to me directly, go to the L2 cage and look for it. Ask who is responsible for letting you play on my cellphone, just changing the device name, you\u0027re all stupid, does the change in device brand and device affect the system. Tell me to meet the person who gave you permission to play on my cellphone. Just by damaging your cellphone, you don\u0027t have any money. Damn it",
+      "revId": "87fbb2eb15589fe2318ac8fd949adc6e09f54954",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ],
   "submitRequirementResults": [
@@ -34,7 +51,7 @@
       },
       "applicabilityExpressionResult": {},
       "submittabilityExpressionResult": {
-        "value": {"expression":{"expressionString":"label:Code-Review=MAX AND -label:Code-Review=MIN"},"status":"PASS","errorMessage":{"value":null},"passingAtoms":["label:Code-Review=MAX"],"failingAtoms":["label:Code-Review=MIN"]}
+        "value": {"expression":{"expressionString":"label:Code-Review=MAX AND -label:Code-Review=MIN"},"status":"PASS","errorMessage":{"value":null},"passingAtoms":["label:Code-Review=MAX"],"failingAtoms":["label:Code-Review=MIN"],"atomExplanations":{"value":null}}
       },
       "overrideExpressionResult": {},
       "patchSetCommitId": "87fbb2eb15589fe2318ac8fd949adc6e09f54954",
@@ -62,10 +79,10 @@
         "allowOverrideInChildProjects": false
       },
       "applicabilityExpressionResult": {
-        "value": {"expression":{"expressionString":"message:\"^.*(D|d)(O|o) (N|n)(O|o)(T|t) (S|s)(U|u)(B|b)(M|m)(I|i)(T|t).*\""},"status":"FAIL","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":["message:\"^.*(D|d)(O|o) (N|n)(O|o)(T|t) (S|s)(U|u)(B|b)(M|m)(I|i)(T|t).*\""]}
+        "value": {"expression":{"expressionString":"message:\"^.*(D|d)(O|o) (N|n)(O|o)(T|t) (S|s)(U|u)(B|b)(M|m)(I|i)(T|t).*\""},"status":"FAIL","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":["message:\"^.*(D|d)(O|o) (N|n)(O|o)(T|t) (S|s)(U|u)(B|b)(M|m)(I|i)(T|t).*\""],"atomExplanations":{"value":null}}
       },
       "submittabilityExpressionResult": {
-        "value": {"expression":{"expressionString":"is:false"},"status":"NOT_EVALUATED","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":[]}
+        "value": {"expression":{"expressionString":"is:false"},"status":"NOT_EVALUATED","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":[],"atomExplanations":{"value":null}}
       },
       "overrideExpressionResult": {},
       "patchSetCommitId": "87fbb2eb15589fe2318ac8fd949adc6e09f54954",
@@ -97,13 +114,13 @@
         "allowOverrideInChildProjects": false
       },
       "applicabilityExpressionResult": {
-        "value": {"expression":{"expressionString":"has:unresolved"},"status":"FAIL","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":["has:unresolved"]}
+        "value": {"expression":{"expressionString":"has:unresolved"},"status":"FAIL","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":["has:unresolved"],"atomExplanations":{"value":null}}
       },
       "submittabilityExpressionResult": {
-        "value": {"expression":{"expressionString":"-has:unresolved"},"status":"NOT_EVALUATED","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":[]}
+        "value": {"expression":{"expressionString":"-has:unresolved"},"status":"NOT_EVALUATED","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":[],"atomExplanations":{"value":null}}
       },
       "overrideExpressionResult": {
-        "value": {"expression":{"expressionString":"hashtag:allow-unresolved-comments"},"status":"NOT_EVALUATED","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":[]}
+        "value": {"expression":{"expressionString":"hashtag:allow-unresolved-comments"},"status":"NOT_EVALUATED","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":[],"atomExplanations":{"value":null}}
       },
       "patchSetCommitId": "87fbb2eb15589fe2318ac8fd949adc6e09f54954",
       "legacy": {
@@ -130,10 +147,10 @@
         "allowOverrideInChildProjects": false
       },
       "applicabilityExpressionResult": {
-        "value": {"expression":{"expressionString":"is:review-enforced_gerrit"},"status":"FAIL","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":["is:review-enforced_gerrit"]}
+        "value": {"expression":{"expressionString":"is:review-enforced_gerrit"},"status":"FAIL","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":["is:review-enforced_gerrit"],"atomExplanations":{"value":null}}
       },
       "submittabilityExpressionResult": {
-        "value": {"expression":{"expressionString":"is:review-enforcement-satisfied_gerrit"},"status":"NOT_EVALUATED","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":[]}
+        "value": {"expression":{"expressionString":"is:review-enforcement-satisfied_gerrit"},"status":"NOT_EVALUATED","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":[],"atomExplanations":{"value":null}}
       },
       "overrideExpressionResult": {},
       "patchSetCommitId": "87fbb2eb15589fe2318ac8fd949adc6e09f54954",
@@ -161,10 +178,10 @@
         "allowOverrideInChildProjects": true
       },
       "applicabilityExpressionResult": {
-        "value": {"expression":{"expressionString":"-branch:refs/meta/config"},"status":"PASS","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":["branch:refs/meta/config"]}
+        "value": {"expression":{"expressionString":"-branch:refs/meta/config"},"status":"PASS","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":["branch:refs/meta/config"],"atomExplanations":{"value":null}}
       },
       "submittabilityExpressionResult": {
-        "value": {"expression":{"expressionString":"label:Verified=MAX AND -label:Verified=MIN"},"status":"PASS","errorMessage":{"value":null},"passingAtoms":["label:Verified=MAX"],"failingAtoms":["label:Verified=MIN"]}
+        "value": {"expression":{"expressionString":"label:Verified=MAX AND -label:Verified=MIN"},"status":"PASS","errorMessage":{"value":null},"passingAtoms":["label:Verified=MAX"],"failingAtoms":["label:Verified=MIN"],"atomExplanations":{"value":null}}
       },
       "overrideExpressionResult": {},
       "patchSetCommitId": "87fbb2eb15589fe2318ac8fd949adc6e09f54954",
@@ -192,10 +209,10 @@
         "allowOverrideInChildProjects": false
       },
       "applicabilityExpressionResult": {
-        "value": {"expression":{"expressionString":"footer:\"Want-Code-Review: all\" -label:Code-Review>=1,users=human_reviewers"},"status":"FAIL","errorMessage":{"value":null},"passingAtoms":["label:Code-Review>=1,users=human_reviewers"],"failingAtoms":["footer:\"Want-Code-Review: all\""]}
+        "value": {"expression":{"expressionString":"footer:\"Want-Code-Review: all\" -label:Code-Review>=1,users=human_reviewers"},"status":"FAIL","errorMessage":{"value":null},"passingAtoms":["label:Code-Review>=1,users=human_reviewers"],"failingAtoms":["footer:\"Want-Code-Review: all\""],"atomExplanations":{"value":null}}
       },
       "submittabilityExpressionResult": {
-        "value": {"expression":{"expressionString":"label:Code-Review>=1,users=human_reviewers"},"status":"NOT_EVALUATED","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":[]}
+        "value": {"expression":{"expressionString":"label:Code-Review>=1,users=human_reviewers"},"status":"NOT_EVALUATED","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":[],"atomExplanations":{"value":null}}
       },
       "overrideExpressionResult": {},
       "patchSetCommitId": "87fbb2eb15589fe2318ac8fd949adc6e09f54954",
