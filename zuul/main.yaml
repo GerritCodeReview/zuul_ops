@@ -44,6 +44,7 @@
           - plugins/depends-on
           - plugins/events
           - plugins/events-log
+          - plugins/examples
           - plugins/gc-conductor
           - plugins/go-import
           - plugins/healthcheck
