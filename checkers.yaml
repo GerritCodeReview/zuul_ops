@@ -339,3 +339,8 @@ checkers:
     repository: "java-prettify"
     name: "Zuul Check Pipeline"
     description: "Run Zuul jobs on new patchsets"
+
+  - uuid: "zuul-check:gerrit-mcp-server"
+    repository: "gerrit-mcp-server"
+    name: "Zuul Check Pipeline"
+    description: "Run Zuul jobs on new patchsets"
