@@ -1,5 +1,7 @@
 - name: Deploy Zuul
   hosts: localhost
+  environment:
+    KUBECONFIG: "{{ ansible_user_dir }}/.kube/config"
   vars:
     root: "{{ (zuul.executor.work_root + '/' + zuul.project.src_dir) }}"
   tasks:
