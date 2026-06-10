@@ -128,6 +128,7 @@
         - name: Add scheduler to inventory
           add_host:
             name: 'zuul-scheduler-0'
+            ansible_kubectl_config: "{{ ansible_user_dir }}/.kube/config"
             ansible_kubectl_namespace: zuul
             ansible_connection: kubectl
         - name: Wait until remote Zuul config is updated
