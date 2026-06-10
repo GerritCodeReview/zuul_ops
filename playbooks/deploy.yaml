@@ -1,18 +1,28 @@
+- name: Setup kubeconfig path vars
+  hosts: localhost
+  tasks:
+    - name: Set kubeconfig path fact
+      set_fact:
+        kubeconfig_dir: "{{ zuul.executor.work_root }}/.kube"
+    - name: Set kubeconfig path fact
+      set_fact:
+        kubeconfig_path: "{{ zuul.executor.work_root }}/.kube/config"
+
 - name: Deploy Zuul
   hosts: localhost
   environment:
-    KUBECONFIG: "{{ ansible_user_dir }}/.kube/config"
+    KUBECONFIG: "{{ kubeconfig_path }}"
   vars:
     root: "{{ (zuul.executor.work_root + '/' + zuul.project.src_dir) }}"
   tasks:
     - name: Make kube directory
       file:
-        path: "{{ ansible_user_dir }}/.kube"
+        path: "{{ kubeconfig_dir }}"
         state: directory
     - name: Write kube config
       template:
         src: kubecfg.yaml.j2
-        dest: "{{ ansible_user_dir }}/.kube/config"
+        dest: "{{ kubeconfig_path }}"
       # Set no_log because we are templating in the token
       no_log: true
 
@@ -128,7 +138,7 @@
         - name: Add scheduler to inventory
           add_host:
             name: 'zuul-scheduler-0'
-            ansible_kubectl_config: "{{ ansible_user_dir }}/.kube/config"
+            ansible_kubectl_config: "{{ kubeconfig_path }}"
             ansible_kubectl_namespace: zuul
             ansible_connection: kubectl
         - name: Wait until remote Zuul config is updated
