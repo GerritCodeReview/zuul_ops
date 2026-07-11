@@ -16,6 +16,23 @@
       "message": "See Discord thread too: https://discord.com/channels/775374026587373568/1514300052900806736",
       "revId": "77cfca163deb59a13e293d4685f74175e5692497",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c160d474_a911e28f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4998172
+      },
+      "writtenOn": "2026-07-11T23:56:53Z",
+      "side": 1,
+      "message": "https://gerrit-review.googlesource.com/c/zuul/ops/+/593421/comments/aa32e68b_8265bcc1",
+      "revId": "77cfca163deb59a13e293d4685f74175e5692497",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ],
   "submitRequirementResults": [
