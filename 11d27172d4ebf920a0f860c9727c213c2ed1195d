@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9456bfc7_4f212a97",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2026-08-23T18:11:02Z",
+      "side": 1,
+      "message": "Seems the 2nd time worked with the two https://ci.gerritcodereview.com/t/gerrit/buildset/953eb9d872434d43b8e39b8a0ff18f65 and https://ci.gerritcodereview.com/t/gerrit/buildset/953eb9d872434d43b8e39b8a0ff18f65",
+      "revId": "11d27172d4ebf920a0f860c9727c213c2ed1195d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
