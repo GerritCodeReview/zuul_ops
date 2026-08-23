@@ -14,9 +14,17 @@ providers:
     zone: us-central1-a
     boot-timeout: 120
     cloud-images:
+      # Debian 13 (trixie): bookworm -- and bookworm-backports, which is
+      # enabled on the image -- carry no openjdk-21, so ensure-java fails
+      # ("No package matching 'openjdk-21-jdk' is available") once the
+      # build playbooks request Java 21. trixie ships openjdk-21-jdk in
+      # main. The cloud-image and label names keep the "debian-bookworm"
+      # prefix on purpose: the label names are the contract with the Zuul
+      # tenant nodesets, and renaming them needs a coordinated job-config
+      # change. That rename can follow separately.
       - name: debian-bookworm
         image-project: debian-cloud
-        image-family: debian-12
+        image-family: debian-13
         username: zuul
         key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDaTT3+Y6dIh221ZsQ0ki6VwGb6lzd1/CvIS8RX6ZNmxJTXS7UKlvhAVTbGQPtmjdIQbwUyEqZEvIm/bUBr7dNbyeMLiRiRtoN+u1Quq8OAes2N7nUKnjLjGjVnM2mvYHGWHRDbpAQCtmXtbiQkHkfLLzewb+MqntQZ57xap31qriTkv4rdnlMN4kElILb5E/8WOAAJXYrt3b1TrTXwZUx7is1OTa38I9jJTpUMCn2otWGH9LlfeUhz/z8ZPB21wgUZN9CF5NwwBanqCNXy0jHiumOGx9e7Hc7apt641KiDuRt0aWyE6No/aMe6hVYnFR3NMG3rBtortXl+R5birK8l zuul
     pools:
