@@ -23,18 +23,23 @@ providers:
       - name: main
         max-servers: 1
         use-internal-ip: True
-        # Host key checking is disabled because:
-        # 1) We're using the internal IP so it's slightly less
-        # valuable (fewer attack vectors).
-        # 2) The images we're using appear to have a key baked into
-        # them which is overwritten at boot.  Because we're using the
-        # internal IP, nodepool can end up connecting to the instance
-        # very quickly and retrieving the original host key rather
-        # than the new one (which is likely to be written a couple of
-        # seconds later).  By disabling this in nodepool, we let Zuul
-        # just use the first key it finds (and it's likely to take
-        # long enough that it will have been updated by then).
-        host-key-checking: False
+        # Gate node readiness on SSH/host-key-scan reachability
+        # (nodepool's GCE default). With this enabled nodepool verifies a node
+        # is SSH/host-key-scan reachable before handing it to the executor, and
+        # relaunches nodes that never become reachable. This relies on
+        # the launcher being able to reach the node internal IP, which
+        # is how this deployment is configured. It was
+        # previously disabled to dodge a GCE baked-in-host-key race
+        # (the image host key is regenerated a few seconds into boot);
+        # that removed the readiness gate and let the executor receive
+        # not-yet-SSH-ready nodes, causing intermittent RETRY_LIMIT
+        # (~1/3 of builds; see issue 502048297). On this Debian image
+        # serial output shows host keys are regenerated before sshd
+        # binds, so a post-sshd ssh-keyscan should capture the
+        # regenerated key, not the baked-in one. Validate the
+        # RETRY_LIMIT rate post-merge; roll back if host-key-scan
+        # failures appear in the launcher log.
+        host-key-checking: True
         labels:
           - name: debian-bookworm-8G
             instance-type: n1-standard-2
