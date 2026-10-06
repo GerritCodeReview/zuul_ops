@@ -71,6 +71,7 @@
           - plugins/rabbitmq
           - plugins/rate-limiter
           - plugins/readonly
+          - plugins/ref-copy
           - plugins/ref-protection
           - plugins/rename-project
           - plugins/reviewers

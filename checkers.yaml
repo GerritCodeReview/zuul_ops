@@ -271,6 +271,11 @@ checkers:
     name: "Zuul Check Pipeline"
     description: "Run Zuul jobs on new patchsets"
 
+  - uuid: "zuul-check:plugins_ref-copy"
+    repository: "plugins/ref-copy"
+    name: "Zuul Check Pipeline"
+    description: "Run Zuul jobs on new patchsets"
+
   - uuid: "zuul-check:plugins_ref-protection"
     repository: "plugins/ref-protection"
     name: "Zuul Check Pipeline"
